@@ -104,7 +104,7 @@ const conditionsDatabase = [
     {
         id: 4,
         name: 'Migraine',
-        symptoms: [22, 15, 28, 23, 27],
+        symptoms: [22, 15, 28, 23, 27, 1],
         severity: 'medium',
         description: 'A neurological condition characterized by intense, debilitating headaches often accompanied by nausea and sensitivity to light.',
         treatments: [
@@ -116,6 +116,22 @@ const conditionsDatabase = [
             'Consider preventive medications if frequent'
         ],
         specialty: 'Neurologist or Headache Specialist'
+    },
+    {
+        id: 22,
+        name: 'Meningitis',
+        symptoms: [1, 22, 28, 24, 5, 15, 38],
+        severity: 'high',
+        description: 'A serious infection causing inflammation of the membranes surrounding the brain and spinal cord. REQUIRES IMMEDIATE MEDICAL ATTENTION.',
+        treatments: [
+            '🚨 SEEK EMERGENCY CARE IMMEDIATELY - Call 911',
+            'Do not delay - this is a medical emergency',
+            'Hospital treatment with IV antibiotics or antivirals',
+            'May require hospitalization',
+            'Close contacts may need prophylactic antibiotics',
+            'Early treatment is critical for best outcomes'
+        ],
+        specialty: 'Emergency Room - IMMEDIATE CARE REQUIRED'
     },
     {
         id: 5,
