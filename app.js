@@ -612,6 +612,566 @@ const conditionsDatabase = [
             'Ask about alternative medications'
         ],
         specialty: 'General Practitioner or Pharmacist'
+    },
+    {
+        id: 36,
+        name: 'Pneumonia',
+        symptoms: [1, 8, 9, 38, 4, 2, 35],
+        severity: 'high',
+        description: 'Lung infection causing inflammation of air sacs, which may fill with fluid.',
+        treatments: [
+            'Take prescribed antibiotics for bacterial pneumonia',
+            'Rest and stay hydrated',
+            'Use fever reducers',
+            'Seek emergency care if severe breathing difficulty',
+            'Get pneumonia vaccine if recommended',
+            'May require hospitalization if severe'
+        ],
+        specialty: 'Pulmonologist or Emergency Room'
+    },
+    {
+        id: 37,
+        name: 'Chronic Fatigue Syndrome',
+        symptoms: [2, 3, 22, 35, 36, 25],
+        severity: 'medium',
+        description: 'Complex disorder characterized by extreme fatigue that doesn\'t improve with rest.',
+        treatments: [
+            'Pace activities to avoid overexertion',
+            'Maintain regular sleep schedule',
+            'Gentle exercise as tolerated',
+            'Cognitive behavioral therapy',
+            'Treat specific symptoms',
+            'Join support groups'
+        ],
+        specialty: 'General Practitioner or Specialist Team'
+    },
+    {
+        id: 38,
+        name: 'Fibromyalgia',
+        symptoms: [35, 36, 2, 22, 25],
+        severity: 'medium',
+        description: 'Chronic condition causing widespread musculoskeletal pain and fatigue.',
+        treatments: [
+            'Take prescribed pain medications',
+            'Regular low-impact exercise',
+            'Physical therapy',
+            'Stress management',
+            'Improve sleep quality',
+            'Consider antidepressants for pain'
+        ],
+        specialty: 'Rheumatologist'
+    },
+    {
+        id: 39,
+        name: 'Mononucleosis (Mono)',
+        symptoms: [2, 1, 10, 32, 22, 7],
+        severity: 'medium',
+        description: 'Viral infection causing extreme fatigue, sore throat, and swollen lymph nodes.',
+        treatments: [
+            'Rest extensively - may need weeks off work/school',
+            'Stay very well hydrated',
+            'Take pain relievers for throat and fever',
+            'Avoid contact sports (risk of spleen rupture)',
+            'Eat soft foods',
+            'Symptoms may last 2-4 weeks'
+        ],
+        specialty: 'General Practitioner'
+    },
+    {
+        id: 40,
+        name: 'Lyme Disease',
+        symptoms: [1, 2, 22, 36, 35, 29],
+        severity: 'medium',
+        description: 'Bacterial infection spread by ticks, causing rash and flu-like symptoms.',
+        treatments: [
+            'Take prescribed antibiotics (doxycycline)',
+            'Complete full course of antibiotics',
+            'Remove tick properly if still attached',
+            'Rest and manage symptoms',
+            'Early treatment prevents complications',
+            'Watch for bull\'s-eye rash'
+        ],
+        specialty: 'Infectious Disease Specialist'
+    },
+    {
+        id: 41,
+        name: 'Tuberculosis (TB)',
+        symptoms: [8, 1, 5, 6, 2, 38],
+        severity: 'high',
+        description: 'Serious bacterial lung infection that can spread to other organs.',
+        treatments: [
+            'Take multiple antibiotics for 6-9 months',
+            'Complete ENTIRE treatment course',
+            'Isolate to prevent spread',
+            'Regular monitoring and chest X-rays',
+            'Report to public health authorities',
+            'Close contacts need testing'
+        ],
+        specialty: 'Infectious Disease Specialist or Pulmonologist'
+    },
+    {
+        id: 42,
+        name: 'Appendicitis',
+        symptoms: [39, 1, 15, 16, 7],
+        severity: 'high',
+        description: 'Inflammation of the appendix requiring emergency surgery.',
+        treatments: [
+            '🚨 SEEK EMERGENCY CARE IMMEDIATELY',
+            'Do NOT eat or drink (may need surgery)',
+            'Do NOT take laxatives or pain medication',
+            'Surgical removal (appendectomy) required',
+            'IV antibiotics',
+            'Can rupture if untreated - life threatening'
+        ],
+        specialty: 'Emergency Room - Surgery Required'
+    },
+    {
+        id: 43,
+        name: 'Gallstones / Gallbladder Issues',
+        symptoms: [39, 15, 16, 1, 21],
+        severity: 'medium',
+        description: 'Hardened deposits in gallbladder causing pain, especially after eating fatty foods.',
+        treatments: [
+            'Avoid fatty, greasy, and fried foods',
+            'Eat smaller, more frequent meals',
+            'Take prescribed pain medication',
+            'May need surgical removal of gallbladder',
+            'Seek emergency care if severe pain or fever',
+            'Maintain healthy weight'
+        ],
+        specialty: 'Gastroenterologist or General Surgeon'
+    },
+    {
+        id: 44,
+        name: 'Irritable Bowel Syndrome (IBS)',
+        symptoms: [19, 20, 17, 18, 2],
+        severity: 'low',
+        description: 'Chronic disorder affecting the large intestine, causing cramping and bowel changes.',
+        treatments: [
+            'Identify and avoid trigger foods',
+            'Increase fiber gradually',
+            'Manage stress',
+            'Regular exercise',
+            'Consider low-FODMAP diet',
+            'Take prescribed medications for symptoms'
+        ],
+        specialty: 'Gastroenterologist'
+    },
+    {
+        id: 45,
+        name: 'Celiac Disease',
+        symptoms: [17, 19, 20, 2, 6, 29],
+        severity: 'medium',
+        description: 'Immune reaction to eating gluten, damaging small intestine lining.',
+        treatments: [
+            'Strict gluten-free diet for life',
+            'Read all food labels carefully',
+            'Take vitamin/mineral supplements',
+            'Join celiac support groups',
+            'Get regular follow-up testing',
+            'Consult dietitian for meal planning'
+        ],
+        specialty: 'Gastroenterologist and Dietitian'
+    },
+    {
+        id: 46,
+        name: 'Lactose Intolerance',
+        symptoms: [17, 19, 20, 15],
+        severity: 'low',
+        description: 'Inability to digest lactose (milk sugar), causing digestive symptoms.',
+        treatments: [
+            'Avoid or limit dairy products',
+            'Try lactose-free alternatives',
+            'Take lactase enzyme supplements before dairy',
+            'Read labels for hidden lactose',
+            'Get calcium from non-dairy sources',
+            'Gradually test tolerance levels'
+        ],
+        specialty: 'General Practitioner or Dietitian'
+    },
+    {
+        id: 47,
+        name: 'GERD / Acid Reflux',
+        symptoms: [21, 19, 8, 10, 38],
+        severity: 'medium',
+        description: 'Stomach acid frequently flows back into the esophagus, irritating its lining.',
+        treatments: [
+            'Take prescribed antacids or PPIs',
+            'Avoid trigger foods (spicy, fatty, acidic)',
+            'Eat smaller meals',
+            'Don\'t lie down right after eating',
+            'Elevate head of bed',
+            'Lose weight if overweight'
+        ],
+        specialty: 'Gastroenterologist'
+    },
+    {
+        id: 48,
+        name: 'Peptic Ulcer',
+        symptoms: [19, 39, 15, 21, 6],
+        severity: 'medium',
+        description: 'Open sores in stomach lining or upper small intestine.',
+        treatments: [
+            'Take prescribed medications (PPIs, antibiotics)',
+            'Avoid NSAIDs (aspirin, ibuprofen)',
+            'Don\'t smoke or drink alcohol',
+            'Eat regular, balanced meals',
+            'Manage stress',
+            'Seek emergency care if vomiting blood'
+        ],
+        specialty: 'Gastroenterologist'
+    },
+    {
+        id: 49,
+        name: 'Diverticulitis',
+        symptoms: [39, 1, 17, 18, 15],
+        severity: 'medium',
+        description: 'Inflammation or infection of small pouches in digestive tract.',
+        treatments: [
+            'Take prescribed antibiotics',
+            'Liquid diet initially, then gradual progression',
+            'Rest bowel',
+            'Apply heat to abdomen for comfort',
+            'High-fiber diet after recovery',
+            'May require hospitalization if severe'
+        ],
+        specialty: 'Gastroenterologist'
+    },
+    {
+        id: 50,
+        name: 'Conjunctivitis (Pink Eye)',
+        symptoms: [31, 30, 27],
+        severity: 'low',
+        description: 'Inflammation of the eye\'s outer membrane causing redness and discharge.',
+        treatments: [
+            'Apply warm compresses',
+            'Use prescribed antibiotic eye drops if bacterial',
+            'Avoid touching or rubbing eyes',
+            'Wash hands frequently',
+            'Don\'t share towels or pillows',
+            'Usually resolves in 7-10 days'
+        ],
+        specialty: 'Ophthalmologist or General Practitioner'
+    },
+    {
+        id: 51,
+        name: 'Shingles (Herpes Zoster)',
+        symptoms: [29, 30, 1, 22, 2],
+        severity: 'medium',
+        description: 'Viral infection causing painful rash, usually on one side of body.',
+        treatments: [
+            'Take antiviral medications within 72 hours',
+            'Apply calamine lotion to rash',
+            'Take pain relievers',
+            'Keep rash clean and covered',
+            'Avoid contact with pregnant women, infants, immunocompromised',
+            'Get shingles vaccine if over 50'
+        ],
+        specialty: 'General Practitioner or Dermatologist'
+    },
+    {
+        id: 52,
+        name: 'Psoriasis',
+        symptoms: [29, 30, 34, 31],
+        severity: 'medium',
+        description: 'Autoimmune condition causing rapid skin cell buildup, forming scales and red patches.',
+        treatments: [
+            'Apply topical corticosteroids',
+            'Use moisturizers regularly',
+            'Get controlled sun exposure',
+            'Take prescribed systemic medications if severe',
+            'Manage stress',
+            'Avoid triggers (infections, stress, cold weather)'
+        ],
+        specialty: 'Dermatologist'
+    },
+    {
+        id: 53,
+        name: 'Cellulitis',
+        symptoms: [29, 31, 32, 1, 30],
+        severity: 'high',
+        description: 'Bacterial skin infection that can spread rapidly and become serious.',
+        treatments: [
+            'Take prescribed antibiotics immediately',
+            'Elevate affected area',
+            'Apply warm compresses',
+            'Mark rash edges to monitor spreading',
+            'Seek emergency care if rapidly worsening',
+            'Complete full course of antibiotics'
+        ],
+        specialty: 'General Practitioner or Emergency Room'
+    },
+    {
+        id: 54,
+        name: 'Scabies',
+        symptoms: [30, 29, 33],
+        severity: 'low',
+        description: 'Skin infestation by tiny mites causing intense itching.',
+        treatments: [
+            'Apply prescribed scabicide cream to entire body',
+            'Wash all clothing and bedding in hot water',
+            'Treat all household members simultaneously',
+            'Vacuum furniture and carpets',
+            'Seal items that can\'t be washed in plastic bags for 72 hours',
+            'Itching may persist for weeks after treatment'
+        ],
+        specialty: 'Dermatologist or General Practitioner'
+    },
+    {
+        id: 55,
+        name: 'Allergic Reaction',
+        symptoms: [29, 30, 33, 32, 9],
+        severity: 'medium',
+        description: 'Immune system response to allergen, can range from mild to severe.',
+        treatments: [
+            'Take antihistamines immediately',
+            'Use EpiPen if severe (anaphylaxis)',
+            '🚨 Call 911 if difficulty breathing or swelling of face/throat',
+            'Identify and avoid allergen',
+            'Carry emergency medication if history of severe reactions',
+            'See allergist for testing'
+        ],
+        specialty: 'Allergist or Emergency Room if severe'
+    },
+    {
+        id: 56,
+        name: 'Tension Headache',
+        symptoms: [22, 35, 2],
+        severity: 'low',
+        description: 'Most common type of headache, feels like tight band around head.',
+        treatments: [
+            'Take over-the-counter pain relievers',
+            'Apply heat or cold to head/neck',
+            'Massage neck and shoulders',
+            'Practice relaxation techniques',
+            'Improve posture',
+            'Manage stress'
+        ],
+        specialty: 'General Practitioner'
+    },
+    {
+        id: 57,
+        name: 'Cluster Headache',
+        symptoms: [22, 40, 27, 11],
+        severity: 'high',
+        description: 'Severe headaches occurring in cyclical patterns or clusters.',
+        treatments: [
+            'Use prescribed oxygen therapy',
+            'Take prescribed triptans',
+            'Avoid alcohol during cluster periods',
+            'Maintain regular sleep schedule',
+            'Use preventive medications',
+            'Seek immediate treatment during attacks'
+        ],
+        specialty: 'Neurologist or Headache Specialist'
+    },
+    {
+        id: 58,
+        name: 'Sinus Headache',
+        symptoms: [22, 12, 11, 1, 38],
+        severity: 'low',
+        description: 'Headache caused by sinus inflammation or infection.',
+        treatments: [
+            'Use decongestants',
+            'Apply warm compresses to face',
+            'Use saline nasal spray',
+            'Stay hydrated',
+            'Take antibiotics if bacterial infection',
+            'Use humidifier'
+        ],
+        specialty: 'ENT Specialist or General Practitioner'
+    },
+    {
+        id: 59,
+        name: 'Multiple Sclerosis (MS)',
+        symptoms: [2, 26, 27, 3, 23, 36],
+        severity: 'high',
+        description: 'Autoimmune disease affecting central nervous system, causing varied neurological symptoms.',
+        treatments: [
+            'Take prescribed disease-modifying therapies',
+            'Physical therapy',
+            'Occupational therapy',
+            'Manage symptoms individually',
+            'Avoid heat and stress',
+            'Regular neurologist monitoring'
+        ],
+        specialty: 'Neurologist'
+    },
+    {
+        id: 60,
+        name: 'Parkinson\'s Disease',
+        symptoms: [26, 3, 23, 2, 37],
+        severity: 'high',
+        description: 'Progressive nervous system disorder affecting movement.',
+        treatments: [
+            'Take prescribed medications (levodopa)',
+            'Physical therapy',
+            'Occupational therapy',
+            'Speech therapy',
+            'Exercise regularly',
+            'Consider deep brain stimulation if advanced'
+        ],
+        specialty: 'Neurologist specializing in Movement Disorders'
+    },
+    {
+        id: 61,
+        name: 'Carpal Tunnel Syndrome',
+        symptoms: [26, 36, 3],
+        severity: 'low',
+        description: 'Compression of nerve in wrist causing numbness, tingling, and weakness in hand.',
+        treatments: [
+            'Wear wrist splint, especially at night',
+            'Take frequent breaks from repetitive activities',
+            'Do stretching exercises',
+            'Apply cold packs to reduce swelling',
+            'Take NSAIDs for pain',
+            'Consider corticosteroid injections or surgery if severe'
+        ],
+        specialty: 'Orthopedic Surgeon or Hand Specialist'
+    },
+    {
+        id: 62,
+        name: 'Peripheral Neuropathy',
+        symptoms: [26, 2, 3, 36],
+        severity: 'medium',
+        description: 'Nerve damage causing weakness, numbness, and pain, usually in hands and feet.',
+        treatments: [
+            'Control underlying condition (diabetes)',
+            'Take prescribed pain medications',
+            'Physical therapy',
+            'Wear proper footwear',
+            'Check feet daily for injuries',
+            'Avoid alcohol and smoking'
+        ],
+        specialty: 'Neurologist or Endocrinologist'
+    },
+    {
+        id: 63,
+        name: 'Sciatica',
+        symptoms: [37, 26, 3, 36],
+        severity: 'medium',
+        description: 'Pain radiating along sciatic nerve from lower back down leg.',
+        treatments: [
+            'Apply heat or ice',
+            'Take anti-inflammatory medications',
+            'Do stretching exercises',
+            'Physical therapy',
+            'Avoid prolonged sitting',
+            'Consider epidural injections if severe'
+        ],
+        specialty: 'Orthopedic Surgeon or Physical Therapist'
+    },
+    {
+        id: 64,
+        name: 'Osteoporosis',
+        symptoms: [37, 36, 3],
+        severity: 'medium',
+        description: 'Weakening of bones, making them fragile and prone to fractures.',
+        treatments: [
+            'Take prescribed bone-strengthening medications',
+            'Ensure adequate calcium and vitamin D intake',
+            'Do weight-bearing exercises',
+            'Avoid smoking and excessive alcohol',
+            'Fall prevention at home',
+            'Get regular bone density tests'
+        ],
+        specialty: 'Endocrinologist or Rheumatologist'
+    },
+    {
+        id: 65,
+        name: 'Gout',
+        symptoms: [36, 32, 31, 1],
+        severity: 'medium',
+        description: 'Form of arthritis causing sudden, severe joint pain, often in big toe.',
+        treatments: [
+            'Take prescribed anti-inflammatory medications',
+            'Elevate affected joint',
+            'Apply ice',
+            'Drink plenty of water',
+            'Avoid alcohol, red meat, and seafood',
+            'Take uric acid-lowering medications'
+        ],
+        specialty: 'Rheumatologist'
+    },
+    {
+        id: 66,
+        name: 'Tendinitis',
+        symptoms: [36, 32, 3],
+        severity: 'low',
+        description: 'Inflammation of tendon, often from overuse.',
+        treatments: [
+            'Rest affected area',
+            'Apply ice',
+            'Take NSAIDs',
+            'Do gentle stretching when pain subsides',
+            'Physical therapy',
+            'Avoid activities that worsen pain'
+        ],
+        specialty: 'Orthopedic Surgeon or Physical Therapist'
+    },
+    {
+        id: 67,
+        name: 'Sleep Apnea',
+        symptoms: [2, 22, 11, 10],
+        severity: 'medium',
+        description: 'Breathing repeatedly stops during sleep, disrupting rest and oxygen levels.',
+        treatments: [
+            'Use CPAP machine during sleep',
+            'Lose weight if overweight',
+            'Sleep on your side',
+            'Avoid alcohol and sedatives before bed',
+            'Stop smoking',
+            'Consider oral appliance or surgery if CPAP ineffective'
+        ],
+        specialty: 'Sleep Specialist or Pulmonologist'
+    },
+    {
+        id: 68,
+        name: 'Insomnia',
+        symptoms: [2, 22, 24, 30],
+        severity: 'low',
+        description: 'Persistent difficulty falling or staying asleep.',
+        treatments: [
+            'Maintain consistent sleep schedule',
+            'Create relaxing bedtime routine',
+            'Avoid screens before bed',
+            'Limit caffeine and alcohol',
+            'Exercise regularly (but not before bed)',
+            'Consider cognitive behavioral therapy for insomnia'
+        ],
+        specialty: 'Sleep Specialist or Psychiatrist'
+    },
+    {
+        id: 69,
+        name: 'Restless Leg Syndrome',
+        symptoms: [26, 35, 2],
+        severity: 'low',
+        description: 'Uncomfortable sensations in legs with urge to move them, especially at night.',
+        treatments: [
+            'Take prescribed medications',
+            'Exercise regularly',
+            'Massage legs',
+            'Apply heat or cold',
+            'Avoid caffeine, alcohol, tobacco',
+            'Maintain regular sleep schedule'
+        ],
+        specialty: 'Neurologist or Sleep Specialist'
+    },
+    {
+        id: 70,
+        name: 'Vitamin D Deficiency',
+        symptoms: [2, 36, 35, 3, 22],
+        severity: 'low',
+        description: 'Insufficient vitamin D causing bone pain, muscle weakness, and fatigue.',
+        treatments: [
+            'Take vitamin D supplements',
+            'Get safe sun exposure (10-30 minutes daily)',
+            'Eat vitamin D-rich foods (fatty fish, eggs, fortified milk)',
+            'Get vitamin D levels tested',
+            'Take calcium supplements',
+            'Address underlying absorption issues'
+        ],
+        specialty: 'General Practitioner or Endocrinologist'
     }
 ];
 
