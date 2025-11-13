@@ -404,6 +404,214 @@ const conditionsDatabase = [
             'Seek emergency help if suicidal thoughts occur'
         ],
         specialty: 'Psychiatrist or Psychologist'
+    },
+    {
+        id: 23,
+        name: 'Vertigo / Inner Ear Problems',
+        symptoms: [23, 15, 16, 22],
+        severity: 'medium',
+        description: 'A sensation of spinning or dizziness, often caused by inner ear problems affecting balance.',
+        treatments: [
+            'Avoid sudden head movements',
+            'Sit or lie down when dizzy',
+            'Take prescribed anti-vertigo medications',
+            'Do vestibular rehabilitation exercises',
+            'Stay hydrated',
+            'Avoid driving if experiencing vertigo'
+        ],
+        specialty: 'ENT Specialist or Neurologist'
+    },
+    {
+        id: 24,
+        name: 'Low Blood Pressure (Hypotension)',
+        symptoms: [23, 3, 2, 24],
+        severity: 'medium',
+        description: 'Blood pressure that\'s lower than normal, which can cause dizziness and fainting.',
+        treatments: [
+            'Increase salt intake (if advised by doctor)',
+            'Drink more fluids',
+            'Stand up slowly from sitting/lying positions',
+            'Wear compression stockings',
+            'Avoid prolonged standing',
+            'Take prescribed medications'
+        ],
+        specialty: 'Cardiologist or General Practitioner'
+    },
+    {
+        id: 25,
+        name: 'Ear Infection (Otitis)',
+        symptoms: [40, 23, 1, 11, 22],
+        severity: 'medium',
+        description: 'Infection of the middle or outer ear causing pain and sometimes dizziness.',
+        treatments: [
+            'Take prescribed antibiotics if bacterial',
+            'Use pain relievers (acetaminophen, ibuprofen)',
+            'Apply warm compress to ear',
+            'Avoid getting water in the ear',
+            'Use prescribed ear drops',
+            'Follow up if symptoms persist beyond 3 days'
+        ],
+        specialty: 'ENT Specialist or General Practitioner'
+    },
+    {
+        id: 26,
+        name: 'Motion Sickness',
+        symptoms: [23, 15, 16, 2],
+        severity: 'low',
+        description: 'Nausea and dizziness caused by motion during travel.',
+        treatments: [
+            'Look at the horizon or fixed point',
+            'Sit in front seat or over wing on plane',
+            'Take anti-motion sickness medication before travel',
+            'Eat light meals before travel',
+            'Get fresh air',
+            'Try ginger or peppermint'
+        ],
+        specialty: 'General Practitioner'
+    },
+    {
+        id: 27,
+        name: 'Concussion',
+        symptoms: [22, 23, 24, 15, 27, 25],
+        severity: 'high',
+        description: 'A mild traumatic brain injury usually caused by a blow to the head.',
+        treatments: [
+            'Rest and avoid physical/mental exertion',
+            'Avoid screens and bright lights',
+            'Do NOT use NSAIDs initially (increase bleeding risk)',
+            'Monitor for worsening symptoms',
+            'Seek emergency care if symptoms worsen',
+            'Gradual return to normal activities as symptoms improve'
+        ],
+        specialty: 'Emergency Room or Neurologist'
+    },
+    {
+        id: 28,
+        name: 'Panic Attack',
+        symptoms: [23, 9, 38, 15, 4],
+        severity: 'medium',
+        description: 'Sudden episode of intense fear triggering severe physical reactions.',
+        treatments: [
+            'Practice deep breathing exercises',
+            'Ground yourself (5 senses technique)',
+            'Remember it will pass (usually 10-20 minutes)',
+            'Consider cognitive behavioral therapy',
+            'Learn stress management techniques',
+            'Consult about anti-anxiety medication if frequent'
+        ],
+        specialty: 'Psychiatrist or Psychologist'
+    },
+    {
+        id: 29,
+        name: 'Heat Exhaustion',
+        symptoms: [23, 4, 15, 2, 35, 22],
+        severity: 'medium',
+        description: 'Condition resulting from overheating, usually from high temperature and humidity.',
+        treatments: [
+            'Move to cool, shaded area immediately',
+            'Drink cool water or sports drinks',
+            'Remove excess clothing',
+            'Apply cool, wet cloths to skin',
+            'Rest and avoid exertion',
+            'Seek medical care if symptoms worsen or don\'t improve'
+        ],
+        specialty: 'Emergency Room if severe'
+    },
+    {
+        id: 30,
+        name: 'Stroke / TIA (Mini-Stroke)',
+        symptoms: [23, 26, 24, 3, 22, 27],
+        severity: 'high',
+        description: 'Reduced blood flow to the brain causing neurological symptoms. MEDICAL EMERGENCY.',
+        treatments: [
+            '🚨 CALL 911 IMMEDIATELY - Time is critical!',
+            'Note time symptoms started',
+            'Do NOT give aspirin unless instructed',
+            'Keep person calm and lying down',
+            'Monitor breathing and consciousness',
+            'Emergency treatment within hours can prevent permanent damage'
+        ],
+        specialty: 'Emergency Room - IMMEDIATE CARE REQUIRED'
+    },
+    {
+        id: 31,
+        name: 'Vestibular Neuritis',
+        symptoms: [23, 15, 16, 2],
+        severity: 'medium',
+        description: 'Inflammation of the inner ear nerve causing severe dizziness and balance problems.',
+        treatments: [
+            'Take prescribed anti-nausea and anti-vertigo medications',
+            'Rest initially, then gradually increase activity',
+            'Do vestibular rehabilitation exercises',
+            'Stay hydrated',
+            'Avoid sudden head movements',
+            'Symptoms usually improve over weeks'
+        ],
+        specialty: 'ENT Specialist or Neurologist'
+    },
+    {
+        id: 32,
+        name: 'Menieres Disease',
+        symptoms: [23, 40, 11, 15],
+        severity: 'medium',
+        description: 'Inner ear disorder causing episodes of vertigo, hearing loss, and ear fullness.',
+        treatments: [
+            'Reduce salt intake',
+            'Take prescribed diuretics',
+            'Avoid caffeine, alcohol, and tobacco',
+            'Manage stress',
+            'Take anti-vertigo medications during attacks',
+            'Consider hearing aids if hearing loss develops'
+        ],
+        specialty: 'ENT Specialist'
+    },
+    {
+        id: 33,
+        name: 'Blood Sugar Issues (Hypoglycemia)',
+        symptoms: [23, 4, 3, 24, 2],
+        severity: 'medium',
+        description: 'Low blood sugar causing dizziness, shakiness, and confusion.',
+        treatments: [
+            'Eat or drink something with fast-acting sugar immediately',
+            'Check blood sugar if possible',
+            'Follow with complex carbohydrates',
+            'Eat regular meals and snacks',
+            'Monitor blood sugar levels',
+            'Adjust diabetes medications if needed (consult doctor)'
+        ],
+        specialty: 'Endocrinologist or General Practitioner'
+    },
+    {
+        id: 34,
+        name: 'Cervical Spine Issues / Whiplash',
+        symptoms: [23, 22, 37, 26],
+        severity: 'medium',
+        description: 'Neck problems causing dizziness, headaches, and numbness.',
+        treatments: [
+            'Apply ice initially, then heat after 48 hours',
+            'Take anti-inflammatory medications',
+            'Do gentle neck exercises',
+            'Maintain good posture',
+            'Physical therapy',
+            'Avoid heavy lifting'
+        ],
+        specialty: 'Orthopedic Surgeon or Physical Therapist'
+    },
+    {
+        id: 35,
+        name: 'Medication Side Effects',
+        symptoms: [23, 15, 3, 2, 22],
+        severity: 'low',
+        description: 'Dizziness and other symptoms caused by medication side effects.',
+        treatments: [
+            'Review all medications with doctor',
+            'Do NOT stop medications without consulting doctor',
+            'Change timing of medication doses',
+            'Stay hydrated',
+            'Stand up slowly',
+            'Ask about alternative medications'
+        ],
+        specialty: 'General Practitioner or Pharmacist'
     }
 ];
 
