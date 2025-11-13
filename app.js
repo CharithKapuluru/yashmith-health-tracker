@@ -292,6 +292,102 @@ const conditionsDatabase = [
             'Consider antihistamines for itching'
         ],
         specialty: 'Dermatologist'
+    },
+    {
+        id: 16,
+        name: 'Heart Failure',
+        symptoms: [2, 9, 32, 7, 3, 8],
+        severity: 'high',
+        description: 'A chronic condition where the heart doesn\'t pump blood as well as it should, leading to fluid buildup and swelling.',
+        treatments: [
+            'Take prescribed medications (diuretics, ACE inhibitors, beta-blockers)',
+            'Limit sodium and fluid intake',
+            'Monitor weight daily',
+            'Engage in doctor-approved exercise',
+            'Quit smoking and limit alcohol',
+            'Attend regular follow-up appointments'
+        ],
+        specialty: 'Cardiologist'
+    },
+    {
+        id: 17,
+        name: 'Kidney Disease',
+        symptoms: [2, 32, 7, 15, 5, 3],
+        severity: 'high',
+        description: 'Chronic kidney disease is gradual loss of kidney function, which can lead to fluid retention, fatigue, and appetite changes.',
+        treatments: [
+            'Follow prescribed medications',
+            'Eat a kidney-friendly diet (low protein, salt, and potassium)',
+            'Control blood pressure and blood sugar',
+            'Stay hydrated but monitor fluid intake',
+            'Avoid NSAIDs and certain medications',
+            'Regular monitoring of kidney function'
+        ],
+        specialty: 'Nephrologist'
+    },
+    {
+        id: 18,
+        name: 'Liver Disease',
+        symptoms: [2, 7, 32, 6, 15, 39],
+        severity: 'high',
+        description: 'Liver disease includes conditions that damage the liver, affecting its ability to function properly.',
+        treatments: [
+            'Avoid alcohol completely',
+            'Eat a balanced, low-fat diet',
+            'Take prescribed medications',
+            'Monitor for complications',
+            'Maintain healthy weight',
+            'Get vaccinated for hepatitis A and B'
+        ],
+        specialty: 'Hepatologist or Gastroenterologist'
+    },
+    {
+        id: 19,
+        name: 'Hypothyroidism',
+        symptoms: [2, 3, 6, 34, 32, 7],
+        severity: 'medium',
+        description: 'An underactive thyroid gland that doesn\'t produce enough thyroid hormone, slowing metabolism.',
+        treatments: [
+            'Take daily thyroid hormone replacement medication',
+            'Get regular blood tests to monitor levels',
+            'Take medication on empty stomach',
+            'Eat a balanced diet rich in iodine',
+            'Exercise regularly',
+            'Manage stress levels'
+        ],
+        specialty: 'Endocrinologist'
+    },
+    {
+        id: 20,
+        name: 'Anemia',
+        symptoms: [2, 3, 23, 9, 34, 7],
+        severity: 'medium',
+        description: 'A condition where you lack enough healthy red blood cells to carry adequate oxygen to tissues.',
+        treatments: [
+            'Take iron supplements if iron-deficient',
+            'Eat iron-rich foods (red meat, beans, spinach)',
+            'Take vitamin B12 and folate supplements if needed',
+            'Treat underlying causes',
+            'Get regular blood tests',
+            'Avoid tea and coffee with meals (blocks iron absorption)'
+        ],
+        specialty: 'Hematologist or General Practitioner'
+    },
+    {
+        id: 21,
+        name: 'Depression',
+        symptoms: [2, 7, 3, 2, 25, 22],
+        severity: 'medium',
+        description: 'A mood disorder causing persistent sadness, loss of interest, and physical symptoms like fatigue.',
+        treatments: [
+            'Consider psychotherapy (CBT, talk therapy)',
+            'Take prescribed antidepressant medications if recommended',
+            'Exercise regularly (30 minutes daily)',
+            'Maintain regular sleep schedule',
+            'Stay socially connected',
+            'Seek emergency help if suicidal thoughts occur'
+        ],
+        specialty: 'Psychiatrist or Psychologist'
     }
 ];
 
@@ -391,17 +487,28 @@ function analyzeSymptoms() {
         const matchedSymptoms = condition.symptoms.filter(s => selectedSymptoms.includes(s));
         const matchPercentage = (matchedSymptoms.length / condition.symptoms.length) * 100;
 
-        // Calculate a weighted score that considers both match percentage and number of matched symptoms
-        const minSymptomsRequired = Math.min(3, Math.ceil(condition.symptoms.length * 0.4)); // At least 40% of condition symptoms
-        const hasEnoughSymptoms = matchedSymptoms.length >= minSymptomsRequired;
-        const hasGoodMatch = matchPercentage >= 50; // Require at least 50% match
+        // Improved matching logic
+        // Require at least 2 symptoms AND at least 30% match for small condition sets
+        // OR at least 3 symptoms AND at least 40% match for larger condition sets
+        const minSymptoms = condition.symptoms.length <= 5 ? 2 : 3;
+        const minPercentage = condition.symptoms.length <= 5 ? 30 : 40;
 
-        // Only include if it meets BOTH criteria: enough symptoms AND good percentage
+        const hasEnoughSymptoms = matchedSymptoms.length >= minSymptoms;
+        const hasGoodMatch = matchPercentage >= minPercentage;
+
+        // Show results if BOTH criteria met
         if (hasEnoughSymptoms && hasGoodMatch) {
-            // Calculate confidence score based on multiple factors
+            // Calculate confidence score with multiple factors
+            const relevanceScore = (matchedSymptoms.length / selectedSymptoms.length) * 100;
+
+            // Weighted scoring:
+            // - 50% based on how many of the condition's symptoms match
+            // - 30% based on how many of the user's symptoms are relevant to this condition
+            // - 20% bonus for having 3+ matched symptoms (strong indicator)
             const confidenceScore = (
-                (matchPercentage * 0.6) + // 60% weight on percentage match
-                ((matchedSymptoms.length / selectedSymptoms.length) * 100 * 0.4) // 40% weight on how many selected symptoms are relevant
+                (matchPercentage * 0.5) +
+                (relevanceScore * 0.3) +
+                (matchedSymptoms.length >= 3 ? 20 : 0)
             );
 
             results.push({
@@ -413,8 +520,13 @@ function analyzeSymptoms() {
         }
     });
 
-    // Sort by confidence score (combination of match quality and relevance)
+    // Sort by confidence score
     results.sort((a, b) => b.confidenceScore - a.confidenceScore);
+
+    // If we have results but none are very confident, add a warning
+    if (results.length > 0 && results[0].confidenceScore < 40) {
+        console.log('Low confidence results - consider selecting more specific symptoms');
+    }
 
     displayResults(results);
 }
