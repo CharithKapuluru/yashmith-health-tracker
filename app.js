@@ -489,28 +489,194 @@ async function findNearbyProviders() {
 
         findProvidersBtn.innerHTML = '<span class="loading"></span> Searching for providers...';
 
-        // For demo purposes, showing mock data
-        // In production, you would call Google Places API or similar
-        displayMockProviders();
+        // Search for different types of healthcare providers
+        const allProviders = [];
+
+        // Search for hospitals
+        const hospitals = await searchPlaces('hospital', userLocation);
+        allProviders.push(...hospitals);
+
+        // Search for doctors
+        const doctors = await searchPlaces('doctor', userLocation);
+        allProviders.push(...doctors);
+
+        // Search for clinics
+        const clinics = await searchPlaces('health', userLocation);
+        allProviders.push(...clinics);
+
+        // Remove duplicates and sort by distance
+        const uniqueProviders = removeDuplicates(allProviders);
+        const sortedProviders = uniqueProviders
+            .sort((a, b) => a.distance - b.distance)
+            .slice(0, 10); // Show top 10 results
+
+        if (sortedProviders.length > 0) {
+            displayProviders(sortedProviders);
+        } else {
+            showNoResults();
+        }
 
     } catch (error) {
-        providersList.innerHTML = `
-            <div style="padding: 20px; text-align: center; color: var(--danger);">
-                <p><strong>Unable to get your location.</strong></p>
-                <p style="margin-top: 10px; font-size: 0.9rem;">Please enable location services in your browser to find nearby healthcare providers.</p>
-                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--gray-600);">
-                    Alternatively, you can search for healthcare providers manually using Google Maps or your preferred map service.
-                </p>
-            </div>
-        `;
-        findProvidersBtn.innerHTML = `
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
-            </svg>
-            Try Again
-        `;
-        findProvidersBtn.disabled = false;
+        console.error('Error finding providers:', error);
+        showLocationError(error.message);
     }
+}
+
+// Search for places using backend API
+async function searchPlaces(type, location) {
+    try {
+        const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'http://localhost:3000'
+            : window.location.origin;
+
+        const response = await fetch(
+            `${API_URL}/api/places/nearby?lat=${location.lat}&lng=${location.lng}&type=${type}&radius=5000`
+        );
+
+        if (!response.ok) {
+            throw new Error(`API request failed: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        if (data.status === 'OK' && data.results) {
+            return data.results.map(place => ({
+                name: place.name,
+                type: formatType(type),
+                address: place.vicinity,
+                distance: calculateDistance(location, {
+                    lat: place.geometry.location.lat,
+                    lng: place.geometry.location.lng
+                }),
+                rating: place.rating || null,
+                userRatingsTotal: place.user_ratings_total || 0,
+                placeId: place.place_id,
+                isOpen: place.opening_hours?.open_now,
+                location: place.geometry.location
+            }));
+        }
+
+        return [];
+    } catch (error) {
+        console.error(`Error searching for ${type}:`, error);
+        return [];
+    }
+}
+
+// Calculate distance between two points in miles
+function calculateDistance(point1, point2) {
+    const R = 3959; // Earth's radius in miles
+    const dLat = (point2.lat - point1.lat) * Math.PI / 180;
+    const dLon = (point2.lng - point1.lng) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(point1.lat * Math.PI / 180) * Math.cos(point2.lat * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+}
+
+// Format type for display
+function formatType(type) {
+    const typeMap = {
+        'hospital': 'Hospital',
+        'doctor': 'Medical Practice',
+        'health': 'Health Clinic',
+        'clinic': 'Clinic'
+    };
+    return typeMap[type] || type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+// Remove duplicate providers based on name and address similarity
+function removeDuplicates(providers) {
+    const seen = new Set();
+    return providers.filter(provider => {
+        const key = `${provider.name.toLowerCase()}-${provider.address.toLowerCase()}`;
+        if (seen.has(key)) {
+            return false;
+        }
+        seen.add(key);
+        return true;
+    });
+}
+
+// Display providers
+function displayProviders(providers) {
+    providersList.innerHTML = providers.map(provider => `
+        <div class="provider-card">
+            <div class="provider-name">${provider.name}</div>
+            <div class="provider-type">${provider.type}</div>
+            <div class="provider-address">📍 ${provider.address}</div>
+            <div class="provider-distance">📏 ${provider.distance.toFixed(1)} miles away</div>
+            ${provider.rating ? `
+                <div style="color: #F59E0B; margin: 8px 0; font-size: 0.9rem;">
+                    ⭐ ${provider.rating}/5 ${provider.userRatingsTotal > 0 ? `(${provider.userRatingsTotal} reviews)` : ''}
+                </div>
+            ` : ''}
+            ${provider.isOpen !== undefined ? `
+                <div style="margin: 8px 0; font-size: 0.85rem; color: ${provider.isOpen ? '#10B981' : '#EF4444'};">
+                    ${provider.isOpen ? '🟢 Open now' : '🔴 Closed now'}
+                </div>
+            ` : ''}
+            <div class="provider-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(provider.name + ' ' + provider.address)}&query_place_id=${provider.placeId}"
+                   target="_blank" class="provider-btn">🗺️ View on Maps</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=${provider.location.lat},${provider.location.lng}"
+                   target="_blank" class="provider-btn">🚗 Get Directions</a>
+            </div>
+        </div>
+    `).join('');
+
+    providersList.innerHTML += `
+        <div style="margin-top: 20px; padding: 15px; background: #DBEAFE; border-radius: 8px; font-size: 0.85rem; color: var(--gray-700);">
+            <strong>ℹ️ Note:</strong> Results are from Google Maps Places API. Click on any provider to view full details, contact information, and reviews on Google Maps.
+        </div>
+    `;
+
+    findProvidersBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
+        </svg>
+        Refresh Results
+    `;
+    findProvidersBtn.disabled = false;
+}
+
+// Show error when location cannot be obtained
+function showLocationError(message) {
+    providersList.innerHTML = `
+        <div style="padding: 20px; text-align: center; color: var(--danger);">
+            <p><strong>Unable to get your location.</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Please enable location services in your browser to find nearby healthcare providers.</p>
+            ${message ? `<p style="margin-top: 10px; font-size: 0.85rem; color: var(--gray-600);">Error: ${message}</p>` : ''}
+            <p style="margin-top: 15px; font-size: 0.85rem; color: var(--gray-600);">
+                Alternatively, you can search for healthcare providers manually using <a href="https://www.google.com/maps/search/hospitals+near+me" target="_blank" style="color: var(--primary); text-decoration: underline;">Google Maps</a>.
+            </p>
+        </div>
+    `;
+    findProvidersBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
+        </svg>
+        Try Again
+    `;
+    findProvidersBtn.disabled = false;
+}
+
+// Show message when no results found
+function showNoResults() {
+    providersList.innerHTML = `
+        <div style="padding: 20px; text-align: center; color: var(--gray-600);">
+            <p><strong>No healthcare providers found nearby.</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Try expanding your search radius or search manually on <a href="https://www.google.com/maps/search/hospitals+near+me" target="_blank" style="color: var(--primary); text-decoration: underline;">Google Maps</a>.</p>
+        </div>
+    `;
+    findProvidersBtn.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
+        </svg>
+        Try Again
+    `;
+    findProvidersBtn.disabled = false;
 }
 
 // Get current position using Geolocation API
@@ -522,69 +688,6 @@ function getCurrentPosition() {
             navigator.geolocation.getCurrentPosition(resolve, reject);
         }
     });
-}
-
-// Display mock providers (replace with real API integration)
-function displayMockProviders() {
-    const mockProviders = [
-        {
-            name: 'City Medical Center',
-            type: 'Hospital',
-            address: '123 Healthcare Ave, Your City',
-            distance: '0.8 miles',
-            phone: '(555) 123-4567'
-        },
-        {
-            name: 'Dr. Sarah Johnson, MD',
-            type: 'General Practitioner',
-            address: '456 Wellness St, Your City',
-            distance: '1.2 miles',
-            phone: '(555) 234-5678'
-        },
-        {
-            name: 'QuickCare Urgent Care',
-            type: 'Urgent Care Center',
-            address: '789 Medical Blvd, Your City',
-            distance: '1.5 miles',
-            phone: '(555) 345-6789'
-        },
-        {
-            name: 'Specialty Health Clinic',
-            type: 'Specialist Clinic',
-            address: '321 Doctor Dr, Your City',
-            distance: '2.1 miles',
-            phone: '(555) 456-7890'
-        }
-    ];
-
-    providersList.innerHTML = mockProviders.map(provider => `
-        <div class="provider-card">
-            <div class="provider-name">${provider.name}</div>
-            <div class="provider-type">${provider.type}</div>
-            <div class="provider-address">📍 ${provider.address}</div>
-            <div class="provider-distance">📏 ${provider.distance} away</div>
-            <div class="provider-actions">
-                <a href="tel:${provider.phone}" class="provider-btn">📞 ${provider.phone}</a>
-                <a href="https://www.google.com/maps/search/${encodeURIComponent(provider.address)}"
-                   target="_blank" class="provider-btn">🗺️ Get Directions</a>
-            </div>
-        </div>
-    `).join('');
-
-    providersList.innerHTML += `
-        <div style="margin-top: 20px; padding: 15px; background: #EFF6FF; border-radius: 8px; font-size: 0.85rem; color: var(--gray-700);">
-            <strong>Note:</strong> These are sample results. To use real location data, you'll need to integrate the Google Maps Places API.
-            Instructions are included in the API configuration file.
-        </div>
-    `;
-
-    findProvidersBtn.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 0C6.13 0 3 3.13 3 7C3 12.25 10 20 10 20C10 20 17 12.25 17 7C17 3.13 13.87 0 10 0ZM10 9.5C8.62 9.5 7.5 8.38 7.5 7C7.5 5.62 8.62 4.5 10 4.5C11.38 4.5 12.5 5.62 12.5 7C12.5 8.38 11.38 9.5 10 9.5Z" fill="white"/>
-        </svg>
-        Refresh Results
-    `;
-    findProvidersBtn.disabled = false;
 }
 
 // Reset the app
