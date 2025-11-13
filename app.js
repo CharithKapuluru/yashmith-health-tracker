@@ -391,17 +391,30 @@ function analyzeSymptoms() {
         const matchedSymptoms = condition.symptoms.filter(s => selectedSymptoms.includes(s));
         const matchPercentage = (matchedSymptoms.length / condition.symptoms.length) * 100;
 
-        if (matchedSymptoms.length >= 2 || matchPercentage >= 30) {
+        // Calculate a weighted score that considers both match percentage and number of matched symptoms
+        const minSymptomsRequired = Math.min(3, Math.ceil(condition.symptoms.length * 0.4)); // At least 40% of condition symptoms
+        const hasEnoughSymptoms = matchedSymptoms.length >= minSymptomsRequired;
+        const hasGoodMatch = matchPercentage >= 50; // Require at least 50% match
+
+        // Only include if it meets BOTH criteria: enough symptoms AND good percentage
+        if (hasEnoughSymptoms && hasGoodMatch) {
+            // Calculate confidence score based on multiple factors
+            const confidenceScore = (
+                (matchPercentage * 0.6) + // 60% weight on percentage match
+                ((matchedSymptoms.length / selectedSymptoms.length) * 100 * 0.4) // 40% weight on how many selected symptoms are relevant
+            );
+
             results.push({
                 ...condition,
                 matchedSymptoms,
-                matchPercentage
+                matchPercentage,
+                confidenceScore
             });
         }
     });
 
-    // Sort by match percentage
-    results.sort((a, b) => b.matchPercentage - a.matchPercentage);
+    // Sort by confidence score (combination of match quality and relevance)
+    results.sort((a, b) => b.confidenceScore - a.confidenceScore);
 
     displayResults(results);
 }
@@ -533,11 +546,17 @@ async function searchPlaces(type, location) {
             `${API_URL}/api/places/nearby?lat=${location.lat}&lng=${location.lng}&type=${type}&radius=5000`
         );
 
+        const data = await response.json();
+
+        // Check for API errors
+        if (data.error) {
+            console.error(`API Error for ${type}:`, data);
+            throw new Error(data.message || data.error || 'API request failed - Places API may not be enabled');
+        }
+
         if (!response.ok) {
             throw new Error(`API request failed: ${response.statusText}`);
         }
-
-        const data = await response.json();
 
         if (data.status === 'OK' && data.results) {
             return data.results.map(place => ({
@@ -559,7 +578,8 @@ async function searchPlaces(type, location) {
         return [];
     } catch (error) {
         console.error(`Error searching for ${type}:`, error);
-        return [];
+        // Re-throw the error so it can be caught by findNearbyProviders
+        throw error;
     }
 }
 
@@ -643,14 +663,37 @@ function displayProviders(providers) {
 
 // Show error when location cannot be obtained
 function showLocationError(message) {
+    const isAPIError = message && (message.includes('API') || message.includes('REQUEST_DENIED') || message.includes('invalid'));
+
     providersList.innerHTML = `
-        <div style="padding: 20px; text-align: center; color: var(--danger);">
-            <p><strong>Unable to get your location.</strong></p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">Please enable location services in your browser to find nearby healthcare providers.</p>
-            ${message ? `<p style="margin-top: 10px; font-size: 0.85rem; color: var(--gray-600);">Error: ${message}</p>` : ''}
-            <p style="margin-top: 15px; font-size: 0.85rem; color: var(--gray-600);">
-                Alternatively, you can search for healthcare providers manually using <a href="https://www.google.com/maps/search/hospitals+near+me" target="_blank" style="color: var(--primary); text-decoration: underline;">Google Maps</a>.
-            </p>
+        <div style="padding: 20px; background: ${isAPIError ? '#FEE2E2' : '#FEF3C7'}; border-radius: 12px;">
+            ${isAPIError ? `
+                <h3 style="color: #991B1B; margin-bottom: 15px;">⚠️ Google Maps API Setup Required</h3>
+                <p style="color: #991B1B; margin-bottom: 15px; font-weight: 600;">
+                    The Google Maps Places API is not yet configured. Please follow these steps:
+                </p>
+                <ol style="text-align: left; margin: 0 auto; max-width: 600px; color: #7C2D12; line-height: 1.8;">
+                    <li><strong>Enable Places API:</strong> Go to <a href="https://console.cloud.google.com/apis/library/places-backend.googleapis.com" target="_blank" style="color: #0891B2; text-decoration: underline;">Google Cloud Console</a> and click "Enable"</li>
+                    <li><strong>Enable Billing:</strong> Places API requires billing (includes $200/month free credit)</li>
+                    <li><strong>Wait 2-3 minutes:</strong> New API keys take time to activate</li>
+                    <li><strong>Restart server:</strong> After enabling, run <code style="background: white; padding: 2px 6px; border-radius: 4px;">npm start</code> again</li>
+                </ol>
+                <p style="margin-top: 20px; color: #7C2D12;">
+                    <strong>Note:</strong> Google provides $200/month free credit (~28,000 searches). See SETUP_GUIDE.md for details.
+                </p>
+            ` : `
+                <p style="color: #991B1B; font-weight: 600; margin-bottom: 10px;">Unable to get your location.</p>
+                <p style="color: #92400E; margin-bottom: 10px;">Please enable location services in your browser to find nearby healthcare providers.</p>
+                ${message ? `<p style="margin-top: 10px; font-size: 0.85rem; color: var(--gray-600);">Error: ${message}</p>` : ''}
+            `}
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid rgba(0,0,0,0.1);">
+                <p style="color: var(--gray-700); font-weight: 500; margin-bottom: 10px;">Search manually instead:</p>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.google.com/maps/search/hospitals+near+me" target="_blank" class="provider-btn">🏥 Find Hospitals</a>
+                    <a href="https://www.google.com/maps/search/doctors+near+me" target="_blank" class="provider-btn">👨‍⚕️ Find Doctors</a>
+                    <a href="https://www.google.com/maps/search/urgent+care+near+me" target="_blank" class="provider-btn">🚑 Find Urgent Care</a>
+                </div>
+            </div>
         </div>
     `;
     findProvidersBtn.innerHTML = `
