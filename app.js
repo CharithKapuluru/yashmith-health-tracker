@@ -14088,6 +14088,1114 @@ const conditionsDatabase = [
     ],
     "specialty": "Endocrinologist"
   }
+,
+  {
+    "id": 1001,
+    "name": "Acne",
+    "symptoms": [1, 15, 89],
+    "severity": "medium",
+    "description": "Skin condition with pimples, blackheads, and inflammation",
+    "treatments": ["Benzoyl peroxide","Retinoids","Antibiotics"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1002,
+    "name": "Allergic Rhinitis",
+    "symptoms": [2, 94, 136, 102],
+    "severity": "medium",
+    "description": "Hay fever causing sneezing, runny nose, itchy eyes",
+    "treatments": ["Antihistamines","Nasal corticosteroids","Decongestants"],
+    "specialty": "Allergist"
+  },
+  {
+    "id": 1003,
+    "name": "Anemia",
+    "symptoms": [3, 52, 53, 161],
+    "severity": "medium",
+    "description": "Reduced red blood cells causing fatigue and weakness",
+    "treatments": ["Iron supplements","Vitamin B12","Dietary changes"],
+    "specialty": "Hematologist"
+  },
+  {
+    "id": 1004,
+    "name": "Anxiety Disorder",
+    "symptoms": [197, 267, 279, 52],
+    "severity": "medium",
+    "description": "Excessive worry and nervousness",
+    "treatments": ["Therapy","SSRIs","Mindfulness"],
+    "specialty": "Psychiatrist"
+  },
+  {
+    "id": 1005,
+    "name": "Appendicitis",
+    "symptoms": [4, 13, 77, 129],
+    "severity": "medium",
+    "description": "Inflammation of the appendix requiring urgent care",
+    "treatments": ["Appendectomy","Antibiotics"],
+    "specialty": "Surgeon"
+  },
+  {
+    "id": 1006,
+    "name": "Athlete's Foot",
+    "symptoms": [5, 89, 142],
+    "severity": "medium",
+    "description": "Fungal infection of the feet",
+    "treatments": ["Antifungal cream","Keep feet dry"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1007,
+    "name": "Back Pain",
+    "symptoms": [6, 58, 210],
+    "severity": "medium",
+    "description": "Pain in the lower or upper back",
+    "treatments": ["Physical therapy","Pain relievers","Exercise"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1008,
+    "name": "Bacterial Vaginosis",
+    "symptoms": [7, 166, 8],
+    "severity": "medium",
+    "description": "Vaginal infection with discharge",
+    "treatments": ["Metronidazole","Clindamycin"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1009,
+    "name": "Bell's Palsy",
+    "symptoms": [9, 161, 214],
+    "severity": "medium",
+    "description": "Facial paralysis on one side",
+    "treatments": ["Corticosteroids","Physical therapy"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1010,
+    "name": "Blepharitis",
+    "symptoms": [10, 89, 142],
+    "severity": "medium",
+    "description": "Eyelid inflammation",
+    "treatments": ["Warm compresses","Eyelid scrubs","Antibiotics"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1011,
+    "name": "Bursitis",
+    "symptoms": [11, 210, 58],
+    "severity": "medium",
+    "description": "Inflammation of fluid sacs near joints",
+    "treatments": ["Rest","Ice","Anti-inflammatory drugs"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1012,
+    "name": "Candidiasis",
+    "symptoms": [12, 89, 142],
+    "severity": "medium",
+    "description": "Yeast infection",
+    "treatments": ["Antifungal medications"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1013,
+    "name": "Carpal Tunnel Syndrome",
+    "symptoms": [13, 161, 214],
+    "severity": "medium",
+    "description": "Nerve compression in wrist",
+    "treatments": ["Wrist splint","Corticosteroids","Surgery"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1014,
+    "name": "Cataracts",
+    "symptoms": [14, 295, 16],
+    "severity": "medium",
+    "description": "Clouding of eye lens",
+    "treatments": ["Cataract surgery"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1015,
+    "name": "Celiac Disease",
+    "symptoms": [15, 77, 13, 176],
+    "severity": "medium",
+    "description": "Gluten intolerance",
+    "treatments": ["Gluten-free diet"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1016,
+    "name": "Chickenpox",
+    "symptoms": [16, 17, 89, 42],
+    "severity": "medium",
+    "description": "Viral infection with itchy rash",
+    "treatments": ["Antiviral drugs","Calamine lotion"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1017,
+    "name": "Cholesterol (High)",
+    "symptoms": [18],
+    "severity": "medium",
+    "description": "Elevated blood cholesterol",
+    "treatments": ["Statins","Diet changes","Exercise"],
+    "specialty": "Cardiologist"
+  },
+  {
+    "id": 1018,
+    "name": "Chronic Fatigue Syndrome",
+    "symptoms": [52, 58, 279],
+    "severity": "medium",
+    "description": "Extreme tiredness not improved by rest",
+    "treatments": ["Graded exercise","Therapy","Sleep hygiene"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1019,
+    "name": "Cold Sores",
+    "symptoms": [19, 89, 142],
+    "severity": "medium",
+    "description": "Herpes simplex virus causing lip blisters",
+    "treatments": ["Antiviral cream","Oral antivirals"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1020,
+    "name": "Conjunctivitis",
+    "symptoms": [20, 142, 89],
+    "severity": "medium",
+    "description": "Pink eye infection",
+    "treatments": ["Antibiotic drops","Artificial tears"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1021,
+    "name": "Constipation",
+    "symptoms": [21, 4, 77],
+    "severity": "medium",
+    "description": "Difficulty passing stools",
+    "treatments": ["Fiber supplements","Laxatives","Hydration"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1022,
+    "name": "COPD",
+    "symptoms": [22, 96, 136, 52],
+    "severity": "medium",
+    "description": "Chronic obstructive pulmonary disease",
+    "treatments": ["Bronchodilators","Steroids","Oxygen therapy"],
+    "specialty": "Pulmonologist"
+  },
+  {
+    "id": 1023,
+    "name": "Croup",
+    "symptoms": [23, 96, 136],
+    "severity": "medium",
+    "description": "Viral infection causing barking cough",
+    "treatments": ["Steroids","Humidified air"],
+    "specialty": "Pediatrician"
+  },
+  {
+    "id": 1024,
+    "name": "Dandruff",
+    "symptoms": [24, 89, 142],
+    "severity": "medium",
+    "description": "Scalp flaking",
+    "treatments": ["Anti-dandruff shampoo","Ketoconazole"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1025,
+    "name": "Dehydration",
+    "symptoms": [25, 52, 161, 128],
+    "severity": "medium",
+    "description": "Insufficient body fluids",
+    "treatments": ["Oral rehydration","IV fluids"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1026,
+    "name": "Depression",
+    "symptoms": [26, 52, 279, 267],
+    "severity": "medium",
+    "description": "Persistent sadness and loss of interest",
+    "treatments": ["Antidepressants","Therapy","Lifestyle changes"],
+    "specialty": "Psychiatrist"
+  },
+  {
+    "id": 1027,
+    "name": "Dermatitis",
+    "symptoms": [27, 89, 142, 15],
+    "severity": "medium",
+    "description": "Skin inflammation and irritation",
+    "treatments": ["Moisturizers","Topical steroids","Avoid irritants"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1028,
+    "name": "Diabetes Type 1",
+    "symptoms": [28, 29, 30, 31],
+    "severity": "medium",
+    "description": "Autoimmune destruction of insulin-producing cells",
+    "treatments": ["Insulin therapy","Blood sugar monitoring"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1029,
+    "name": "Diabetes Type 2",
+    "symptoms": [28, 29, 30, 128],
+    "severity": "medium",
+    "description": "Insulin resistance and high blood sugar",
+    "treatments": ["Metformin","Diet","Exercise","Insulin"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1030,
+    "name": "Diverticulitis",
+    "symptoms": [4, 13, 77, 129],
+    "severity": "medium",
+    "description": "Inflammation of colon pouches",
+    "treatments": ["Antibiotics","Liquid diet","Surgery if severe"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1031,
+    "name": "Dry Eye Syndrome",
+    "symptoms": [32, 142, 89],
+    "severity": "medium",
+    "description": "Insufficient tear production",
+    "treatments": ["Artificial tears","Punctal plugs"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1032,
+    "name": "Ear Infection",
+    "symptoms": [33, 34, 129, 42],
+    "severity": "medium",
+    "description": "Bacterial or viral ear infection",
+    "treatments": ["Antibiotics","Pain relievers"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1033,
+    "name": "Eating Disorder",
+    "symptoms": [35, 279, 267, 128],
+    "severity": "medium",
+    "description": "Abnormal eating habits",
+    "treatments": ["Therapy","Nutritional counseling"],
+    "specialty": "Psychiatrist"
+  },
+  {
+    "id": 1034,
+    "name": "Eczema",
+    "symptoms": [89, 142, 15, 27],
+    "severity": "medium",
+    "description": "Chronic itchy skin condition",
+    "treatments": ["Moisturizers","Topical steroids","Avoid triggers"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1035,
+    "name": "Endometriosis",
+    "symptoms": [36, 37, 4, 128],
+    "severity": "medium",
+    "description": "Uterine tissue growing outside uterus",
+    "treatments": ["Pain relievers","Hormonal therapy","Surgery"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1036,
+    "name": "Epilepsy",
+    "symptoms": [38, 161, 279],
+    "severity": "medium",
+    "description": "Seizure disorder",
+    "treatments": ["Anticonvulsants","Surgery in some cases"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1037,
+    "name": "Erectile Dysfunction",
+    "symptoms": [39],
+    "severity": "medium",
+    "description": "Difficulty achieving or maintaining erection",
+    "treatments": ["Viagra","Cialis","Therapy"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1038,
+    "name": "Fibroid Uterus",
+    "symptoms": [40, 37, 4, 128],
+    "severity": "medium",
+    "description": "Non-cancerous uterine growths",
+    "treatments": ["Pain management","Hormones","Surgery"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1039,
+    "name": "Food Poisoning",
+    "symptoms": [77, 13, 129, 176],
+    "severity": "medium",
+    "description": "Illness from contaminated food",
+    "treatments": ["Hydration","Rest","Anti-nausea medication"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1040,
+    "name": "Gallstones",
+    "symptoms": [4, 13, 77, 129],
+    "severity": "medium",
+    "description": "Hard deposits in gallbladder",
+    "treatments": ["Surgery","Bile acid pills"],
+    "specialty": "Surgeon"
+  },
+  {
+    "id": 1041,
+    "name": "Gastritis",
+    "symptoms": [4, 13, 77, 129],
+    "severity": "medium",
+    "description": "Stomach lining inflammation",
+    "treatments": ["Antacids","PPIs","Avoid irritants"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1042,
+    "name": "Genital Herpes",
+    "symptoms": [89, 142, 166],
+    "severity": "medium",
+    "description": "STI causing genital sores",
+    "treatments": ["Antiviral medications"],
+    "specialty": "Infectious Disease"
+  },
+  {
+    "id": 1043,
+    "name": "Genital Warts",
+    "symptoms": [89, 166],
+    "severity": "medium",
+    "description": "HPV-caused skin growths",
+    "treatments": ["Topical treatments","Cryotherapy","Surgery"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1044,
+    "name": "Glaucoma",
+    "symptoms": [41, 295, 214],
+    "severity": "medium",
+    "description": "Optic nerve damage from eye pressure",
+    "treatments": ["Eye drops","Surgery","Laser treatment"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1045,
+    "name": "Gonorrhea",
+    "symptoms": [166, 8, 129],
+    "severity": "medium",
+    "description": "Bacterial STI",
+    "treatments": ["Antibiotics"],
+    "specialty": "Infectious Disease"
+  },
+  {
+    "id": 1046,
+    "name": "Gout",
+    "symptoms": [11, 210, 58, 89],
+    "severity": "medium",
+    "description": "Arthritis from uric acid crystals",
+    "treatments": ["NSAIDs","Colchicine","Allopurinol"],
+    "specialty": "Rheumatologist"
+  },
+  {
+    "id": 1047,
+    "name": "Hay Fever",
+    "symptoms": [2, 94, 136, 102],
+    "severity": "medium",
+    "description": "Seasonal allergies",
+    "treatments": ["Antihistamines","Nasal sprays"],
+    "specialty": "Allergist"
+  },
+  {
+    "id": 1048,
+    "name": "Head Lice",
+    "symptoms": [142, 89],
+    "severity": "medium",
+    "description": "Scalp parasite infestation",
+    "treatments": ["Medicated shampoo","Nit combing"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1049,
+    "name": "Heartburn",
+    "symptoms": [43, 77],
+    "severity": "medium",
+    "description": "Acid reflux into esophagus",
+    "treatments": ["Antacids","PPIs","Lifestyle changes"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1050,
+    "name": "Heat Exhaustion",
+    "symptoms": [44, 52, 279, 128],
+    "severity": "medium",
+    "description": "Overheating from heat exposure",
+    "treatments": ["Cool environment","Hydration","Rest"],
+    "specialty": "Emergency Medicine"
+  },
+  {
+    "id": 1051,
+    "name": "Hemorrhoids",
+    "symptoms": [45, 129, 142],
+    "severity": "medium",
+    "description": "Swollen rectal veins",
+    "treatments": ["Fiber","Topical creams","Surgery if severe"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1052,
+    "name": "Hepatitis A",
+    "symptoms": [46, 77, 13, 129, 42],
+    "severity": "medium",
+    "description": "Viral liver infection",
+    "treatments": ["Rest","Hydration","Vaccination"],
+    "specialty": "Hepatologist"
+  },
+  {
+    "id": 1053,
+    "name": "Hepatitis B",
+    "symptoms": [46, 77, 13, 52, 42],
+    "severity": "medium",
+    "description": "Chronic viral liver infection",
+    "treatments": ["Antiviral drugs","Vaccination"],
+    "specialty": "Hepatologist"
+  },
+  {
+    "id": 1054,
+    "name": "Hepatitis C",
+    "symptoms": [46, 52, 77],
+    "severity": "medium",
+    "description": "Chronic viral liver infection",
+    "treatments": ["Direct-acting antivirals"],
+    "specialty": "Hepatologist"
+  },
+  {
+    "id": 1055,
+    "name": "Hiatal Hernia",
+    "symptoms": [43, 77, 4],
+    "severity": "medium",
+    "description": "Stomach pushes through diaphragm",
+    "treatments": ["Antacids","Surgery if severe"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1056,
+    "name": "High Blood Pressure",
+    "symptoms": [214, 279],
+    "severity": "medium",
+    "description": "Hypertension",
+    "treatments": ["ACE inhibitors","Diuretics","Lifestyle changes"],
+    "specialty": "Cardiologist"
+  },
+  {
+    "id": 1057,
+    "name": "Hives",
+    "symptoms": [89, 142, 15],
+    "severity": "medium",
+    "description": "Allergic skin welts",
+    "treatments": ["Antihistamines","Avoid triggers"],
+    "specialty": "Allergist"
+  },
+  {
+    "id": 1058,
+    "name": "Hyperthyroidism",
+    "symptoms": [47, 48, 279, 128],
+    "severity": "medium",
+    "description": "Overactive thyroid",
+    "treatments": ["Antithyroid drugs","Radioactive iodine","Surgery"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1059,
+    "name": "Hypothyroidism",
+    "symptoms": [52, 128, 161, 49],
+    "severity": "medium",
+    "description": "Underactive thyroid",
+    "treatments": ["Thyroid hormone replacement"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1060,
+    "name": "Impetigo",
+    "symptoms": [89, 142, 15],
+    "severity": "medium",
+    "description": "Bacterial skin infection",
+    "treatments": ["Antibiotic ointment","Oral antibiotics"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1061,
+    "name": "Incontinence",
+    "symptoms": [50],
+    "severity": "medium",
+    "description": "Inability to control urination",
+    "treatments": ["Pelvic exercises","Medication","Surgery"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1062,
+    "name": "Influenza",
+    "symptoms": [42, 52, 58, 96, 136, 214],
+    "severity": "medium",
+    "description": "Flu virus infection",
+    "treatments": ["Antiviral drugs","Rest","Fluids"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1063,
+    "name": "Insomnia",
+    "symptoms": [51, 52, 279],
+    "severity": "medium",
+    "description": "Difficulty sleeping",
+    "treatments": ["Sleep hygiene","CBT","Sleep medications"],
+    "specialty": "Sleep Specialist"
+  },
+  {
+    "id": 1064,
+    "name": "Irritable Bowel Syndrome",
+    "symptoms": [4, 77, 13, 176],
+    "severity": "medium",
+    "description": "Chronic digestive disorder",
+    "treatments": ["Diet changes","Fiber","Antispasmodics"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1065,
+    "name": "Kidney Infection",
+    "symptoms": [54, 129, 42, 4],
+    "severity": "medium",
+    "description": "Bacterial kidney infection",
+    "treatments": ["Antibiotics","Hydration"],
+    "specialty": "Nephrologist"
+  },
+  {
+    "id": 1066,
+    "name": "Kidney Stones",
+    "symptoms": [55, 129, 54, 13],
+    "severity": "medium",
+    "description": "Hard mineral deposits in kidney",
+    "treatments": ["Pain management","Hydration","Lithotripsy"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1067,
+    "name": "Lactose Intolerance",
+    "symptoms": [77, 13, 176, 4],
+    "severity": "medium",
+    "description": "Inability to digest lactose",
+    "treatments": ["Lactose-free diet","Lactase supplements"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1068,
+    "name": "Laryngitis",
+    "symptoms": [56, 124, 96],
+    "severity": "medium",
+    "description": "Voice box inflammation",
+    "treatments": ["Voice rest","Hydration","Humidifier"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1069,
+    "name": "Lyme Disease",
+    "symptoms": [89, 42, 52, 58],
+    "severity": "medium",
+    "description": "Tick-borne bacterial infection",
+    "treatments": ["Antibiotics"],
+    "specialty": "Infectious Disease"
+  },
+  {
+    "id": 1070,
+    "name": "Macular Degeneration",
+    "symptoms": [295, 16],
+    "severity": "medium",
+    "description": "Vision loss in center of visual field",
+    "treatments": ["Anti-VEGF injections","Vitamins"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1071,
+    "name": "Measles",
+    "symptoms": [89, 42, 96, 136, 102],
+    "severity": "medium",
+    "description": "Highly contagious viral infection",
+    "treatments": ["Rest","Hydration","Fever reducers"],
+    "specialty": "Pediatrician"
+  },
+  {
+    "id": 1072,
+    "name": "Meniere's Disease",
+    "symptoms": [57, 161, 128, 214],
+    "severity": "medium",
+    "description": "Inner ear disorder causing vertigo",
+    "treatments": ["Diuretics","Low-salt diet"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1073,
+    "name": "Mononucleosis",
+    "symptoms": [52, 56, 42, 58],
+    "severity": "medium",
+    "description": "Viral infection (Epstein-Barr)",
+    "treatments": ["Rest","Hydration","Pain relievers"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1074,
+    "name": "Multiple Sclerosis",
+    "symptoms": [161, 295, 52, 58],
+    "severity": "medium",
+    "description": "Autoimmune nerve disease",
+    "treatments": ["Disease-modifying therapies","Steroids"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1075,
+    "name": "Mumps",
+    "symptoms": [58, 42, 56],
+    "severity": "medium",
+    "description": "Viral infection causing swollen glands",
+    "treatments": ["Rest","Pain relievers","Vaccination"],
+    "specialty": "Pediatrician"
+  },
+  {
+    "id": 1076,
+    "name": "Nail Fungus",
+    "symptoms": [89, 142],
+    "severity": "medium",
+    "description": "Fungal nail infection",
+    "treatments": ["Antifungal medications","Topical treatments"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1077,
+    "name": "Nausea",
+    "symptoms": [77, 128, 13],
+    "severity": "medium",
+    "description": "Feeling of wanting to vomit",
+    "treatments": ["Anti-nausea drugs","Ginger","Hydration"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1078,
+    "name": "Nosebleed",
+    "symptoms": [59],
+    "severity": "medium",
+    "description": "Bleeding from nose",
+    "treatments": ["Pinch nose","Lean forward","Cold compress"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1079,
+    "name": "Obesity",
+    "symptoms": [60, 128],
+    "severity": "medium",
+    "description": "Excessive body weight",
+    "treatments": ["Diet","Exercise","Bariatric surgery"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1080,
+    "name": "Osteoarthritis",
+    "symptoms": [11, 210, 58],
+    "severity": "medium",
+    "description": "Joint cartilage breakdown",
+    "treatments": ["Pain relievers","Physical therapy","Joint replacement"],
+    "specialty": "Rheumatologist"
+  },
+  {
+    "id": 1081,
+    "name": "Osteoporosis",
+    "symptoms": [61, 210],
+    "severity": "medium",
+    "description": "Weak and brittle bones",
+    "treatments": ["Calcium","Vitamin D","Bisphosphonates"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1082,
+    "name": "Ovarian Cyst",
+    "symptoms": [4, 37, 128],
+    "severity": "medium",
+    "description": "Fluid-filled sac on ovary",
+    "treatments": ["Observation","Surgery if large"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1083,
+    "name": "Parkinson's Disease",
+    "symptoms": [62, 161, 210, 58],
+    "severity": "medium",
+    "description": "Progressive nervous system disorder",
+    "treatments": ["Levodopa","Dopamine agonists"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1084,
+    "name": "Pelvic Inflammatory Disease",
+    "symptoms": [4, 37, 166, 42],
+    "severity": "medium",
+    "description": "Female reproductive organ infection",
+    "treatments": ["Antibiotics"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1085,
+    "name": "Peptic Ulcer",
+    "symptoms": [4, 77, 13, 129],
+    "severity": "medium",
+    "description": "Stomach or intestinal ulcer",
+    "treatments": ["PPIs","Antibiotics if H. pylori"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1086,
+    "name": "Peripheral Neuropathy",
+    "symptoms": [161, 214, 58],
+    "severity": "medium",
+    "description": "Nerve damage causing numbness",
+    "treatments": ["Pain medications","Physical therapy"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1087,
+    "name": "Pneumonia (Bacterial)",
+    "symptoms": [96, 42, 136, 52, 58],
+    "severity": "medium",
+    "description": "Lung infection",
+    "treatments": ["Antibiotics","Rest","Fluids"],
+    "specialty": "Pulmonologist"
+  },
+  {
+    "id": 1088,
+    "name": "Poison Ivy",
+    "symptoms": [89, 142, 15],
+    "severity": "medium",
+    "description": "Allergic skin reaction to plant",
+    "treatments": ["Topical steroids","Antihistamines"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1089,
+    "name": "Polycystic Ovary Syndrome",
+    "symptoms": [37, 128, 47],
+    "severity": "medium",
+    "description": "Hormonal disorder in women",
+    "treatments": ["Birth control","Metformin","Lifestyle changes"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1090,
+    "name": "Prediabetes",
+    "symptoms": [28, 128],
+    "severity": "medium",
+    "description": "Blood sugar higher than normal",
+    "treatments": ["Diet","Exercise","Metformin"],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1091,
+    "name": "Prostate Cancer",
+    "symptoms": [63, 54],
+    "severity": "medium",
+    "description": "Cancer of prostate gland",
+    "treatments": ["Surgery","Radiation","Hormone therapy"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1092,
+    "name": "Prostatitis",
+    "symptoms": [54, 63, 129],
+    "severity": "medium",
+    "description": "Prostate gland inflammation",
+    "treatments": ["Antibiotics","Alpha blockers"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1093,
+    "name": "Psoriasis",
+    "symptoms": [89, 15, 142],
+    "severity": "medium",
+    "description": "Autoimmune skin condition",
+    "treatments": ["Topical steroids","Biologics","Light therapy"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1094,
+    "name": "Restless Leg Syndrome",
+    "symptoms": [64, 51],
+    "severity": "medium",
+    "description": "Urge to move legs",
+    "treatments": ["Dopamine agonists","Gabapentin"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1095,
+    "name": "Rheumatoid Arthritis",
+    "symptoms": [11, 210, 58, 52],
+    "severity": "medium",
+    "description": "Autoimmune joint inflammation",
+    "treatments": ["DMARDs","Biologics","Steroids"],
+    "specialty": "Rheumatologist"
+  },
+  {
+    "id": 1096,
+    "name": "Rosacea",
+    "symptoms": [89, 15],
+    "severity": "medium",
+    "description": "Facial redness and pimples",
+    "treatments": ["Topical metronidazole","Oral antibiotics"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1097,
+    "name": "Scabies",
+    "symptoms": [142, 89, 15],
+    "severity": "medium",
+    "description": "Mite infestation causing itching",
+    "treatments": ["Permethrin cream","Ivermectin"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1098,
+    "name": "Scarlet Fever",
+    "symptoms": [89, 42, 56],
+    "severity": "medium",
+    "description": "Bacterial infection with rash",
+    "treatments": ["Antibiotics"],
+    "specialty": "Pediatrician"
+  },
+  {
+    "id": 1099,
+    "name": "Sciatica",
+    "symptoms": [6, 58, 161],
+    "severity": "medium",
+    "description": "Nerve pain down leg",
+    "treatments": ["Physical therapy","Pain relievers","Surgery if severe"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1100,
+    "name": "Shingles",
+    "symptoms": [89, 129, 142, 15],
+    "severity": "medium",
+    "description": "Reactivated chickenpox virus",
+    "treatments": ["Antivirals","Pain medications"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1101,
+    "name": "Sinusitis",
+    "symptoms": [65, 214, 94, 136],
+    "severity": "medium",
+    "description": "Sinus inflammation",
+    "treatments": ["Nasal decongestants","Antibiotics if bacterial"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1102,
+    "name": "Sleep Apnea",
+    "symptoms": [66, 52, 214],
+    "severity": "medium",
+    "description": "Breathing stops during sleep",
+    "treatments": ["CPAP machine","Weight loss","Surgery"],
+    "specialty": "Sleep Specialist"
+  },
+  {
+    "id": 1103,
+    "name": "Sprain",
+    "symptoms": [210, 58, 89],
+    "severity": "medium",
+    "description": "Stretched or torn ligament",
+    "treatments": ["RICE method","Pain relievers"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1104,
+    "name": "Stomach Flu",
+    "symptoms": [77, 13, 129, 42, 52],
+    "severity": "medium",
+    "description": "Viral gastroenteritis",
+    "treatments": ["Hydration","Rest","Anti-nausea drugs"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1105,
+    "name": "Strep Throat",
+    "symptoms": [56, 42, 129],
+    "severity": "medium",
+    "description": "Bacterial throat infection",
+    "treatments": ["Antibiotics"],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 1106,
+    "name": "Stress",
+    "symptoms": [279, 214, 52, 267],
+    "severity": "medium",
+    "description": "Mental or emotional strain",
+    "treatments": ["Relaxation techniques","Exercise","Therapy"],
+    "specialty": "Psychiatrist"
+  },
+  {
+    "id": 1107,
+    "name": "Stroke",
+    "symptoms": [67, 161, 295, 68],
+    "severity": "medium",
+    "description": "Brain blood supply interrupted",
+    "treatments": ["Emergency clot-busting drugs","Surgery"],
+    "specialty": "Neurologist"
+  },
+  {
+    "id": 1108,
+    "name": "Sty",
+    "symptoms": [89, 142, 129],
+    "severity": "medium",
+    "description": "Eyelid infection",
+    "treatments": ["Warm compresses","Antibiotic ointment"],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 1109,
+    "name": "Sunburn",
+    "symptoms": [89, 129, 15],
+    "severity": "medium",
+    "description": "UV radiation skin damage",
+    "treatments": ["Aloe vera","Cool compresses","Pain relievers"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1110,
+    "name": "Syphilis",
+    "symptoms": [89, 166],
+    "severity": "medium",
+    "description": "Bacterial STI",
+    "treatments": ["Penicillin"],
+    "specialty": "Infectious Disease"
+  },
+  {
+    "id": 1111,
+    "name": "Tendonitis",
+    "symptoms": [210, 58, 89],
+    "severity": "medium",
+    "description": "Tendon inflammation",
+    "treatments": ["Rest","Ice","Physical therapy"],
+    "specialty": "Orthopedist"
+  },
+  {
+    "id": 1112,
+    "name": "Tinnitus",
+    "symptoms": [69],
+    "severity": "medium",
+    "description": "Ringing in ears",
+    "treatments": ["Hearing aids","Sound therapy","CBT"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1113,
+    "name": "Tonsillitis",
+    "symptoms": [56, 42, 129],
+    "severity": "medium",
+    "description": "Inflamed tonsils",
+    "treatments": ["Antibiotics if bacterial","Tonsillectomy if recurrent"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1114,
+    "name": "Toothache",
+    "symptoms": [70, 129],
+    "severity": "medium",
+    "description": "Tooth or gum pain",
+    "treatments": ["Dental filling","Root canal","Extraction"],
+    "specialty": "Dentist"
+  },
+  {
+    "id": 1115,
+    "name": "Trichomonas",
+    "symptoms": [166, 8, 142],
+    "severity": "medium",
+    "description": "Parasitic STI",
+    "treatments": ["Metronidazole"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1116,
+    "name": "Ulcerative Colitis",
+    "symptoms": [4, 77, 13, 176],
+    "severity": "medium",
+    "description": "Inflammatory bowel disease",
+    "treatments": ["Anti-inflammatory drugs","Immunosuppressants"],
+    "specialty": "Gastroenterologist"
+  },
+  {
+    "id": 1117,
+    "name": "Urinary Tract Infection",
+    "symptoms": [54, 63, 129],
+    "severity": "medium",
+    "description": "Bacterial infection of urinary system",
+    "treatments": ["Antibiotics","Hydration"],
+    "specialty": "Urologist"
+  },
+  {
+    "id": 1118,
+    "name": "Uterine Prolapse",
+    "symptoms": [71, 4],
+    "severity": "medium",
+    "description": "Uterus drops into vagina",
+    "treatments": ["Pelvic exercises","Pessary","Surgery"],
+    "specialty": "Gynecologist"
+  },
+  {
+    "id": 1119,
+    "name": "Varicose Veins",
+    "symptoms": [72, 58, 210],
+    "severity": "medium",
+    "description": "Enlarged twisted veins",
+    "treatments": ["Compression stockings","Sclerotherapy","Surgery"],
+    "specialty": "Vascular Surgeon"
+  },
+  {
+    "id": 1120,
+    "name": "Vertigo",
+    "symptoms": [57, 128, 161],
+    "severity": "medium",
+    "description": "Spinning sensation",
+    "treatments": ["Vestibular rehabilitation","Medications"],
+    "specialty": "ENT Specialist"
+  },
+  {
+    "id": 1121,
+    "name": "Vitiligo",
+    "symptoms": [73],
+    "severity": "medium",
+    "description": "Loss of skin pigmentation",
+    "treatments": ["Topical steroids","Light therapy"],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 1122,
+    "name": "Whooping Cough",
+    "symptoms": [96, 136],
+    "severity": "medium",
+    "description": "Severe bacterial cough",
+    "treatments": ["Antibiotics","Vaccination"],
+    "specialty": "Pediatrician"
+  },
+  {
+    "id": 1123,
+    "name": "Yeast Infection",
+    "symptoms": [142, 166, 8],
+    "severity": "medium",
+    "description": "Vaginal candida overgrowth",
+    "treatments": ["Antifungal cream or pill"],
+    "specialty": "Gynecologist"
+  }
 ];
 
 // Total: 1000 symptoms, 400 conditions
