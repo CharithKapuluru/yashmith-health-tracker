@@ -15465,49 +15465,56 @@ async function findNearbyProviders() {
     }
 }
 
-// Search for places using backend API
+// Search for places using Google Maps Places Service
 async function searchPlaces(type, location) {
-    try {
-        // Call Google Maps Places API directly from the browser
-        const GOOGLE_API_KEY = 'AIzaSyD5HcagHEzKBpgXtKMKXZDWAkZdPdaX8Vs';
-        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.lng}&radius=5000&type=${type}&key=${GOOGLE_API_KEY}`;
+    return new Promise((resolve, reject) => {
+        try {
+            // Create a map element (required for PlacesService but not displayed)
+            const mapDiv = document.createElement('div');
+            const map = new google.maps.Map(mapDiv);
 
-        const response = await fetch(url);
-        const data = await response.json();
+            // Create PlacesService
+            const service = new google.maps.places.PlacesService(map);
 
-        // Check for API errors
-        if (data.error_message) {
-            console.error(`API Error for ${type}:`, data);
-            throw new Error(data.error_message || 'API request failed - Places API may not be enabled');
+            // Search request
+            const request = {
+                location: new google.maps.LatLng(location.lat, location.lng),
+                radius: 5000,
+                type: type
+            };
+
+            service.nearbySearch(request, (results, status) => {
+                if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                    const places = results.map(place => ({
+                        name: place.name,
+                        type: formatType(type),
+                        address: place.vicinity,
+                        distance: calculateDistance(location, {
+                            lat: place.geometry.location.lat(),
+                            lng: place.geometry.location.lng()
+                        }),
+                        rating: place.rating || null,
+                        userRatingsTotal: place.user_ratings_total || 0,
+                        placeId: place.place_id,
+                        isOpen: place.opening_hours?.open_now,
+                        location: {
+                            lat: place.geometry.location.lat(),
+                            lng: place.geometry.location.lng()
+                        }
+                    }));
+                    resolve(places);
+                } else if (status === google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+                    resolve([]);
+                } else {
+                    console.error(`Places API error for ${type}:`, status);
+                    reject(new Error(`Places API error: ${status}`));
+                }
+            });
+        } catch (error) {
+            console.error(`Error searching for ${type}:`, error);
+            reject(error);
         }
-
-        if (!response.ok) {
-            throw new Error(`API request failed: ${response.statusText}`);
-        }
-
-        if (data.status === 'OK' && data.results) {
-            return data.results.map(place => ({
-                name: place.name,
-                type: formatType(type),
-                address: place.vicinity,
-                distance: calculateDistance(location, {
-                    lat: place.geometry.location.lat,
-                    lng: place.geometry.location.lng
-                }),
-                rating: place.rating || null,
-                userRatingsTotal: place.user_ratings_total || 0,
-                placeId: place.place_id,
-                isOpen: place.opening_hours?.open_now,
-                location: place.geometry.location
-            }));
-        }
-
-        return [];
-    } catch (error) {
-        console.error(`Error searching for ${type}:`, error);
-        // Re-throw the error so it can be caught by findNearbyProviders
-        throw error;
-    }
+    });
 }
 
 // Calculate distance between two points in miles
