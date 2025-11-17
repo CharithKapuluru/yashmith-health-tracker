@@ -15662,7 +15662,13 @@ function getCurrentPosition() {
         if (!navigator.geolocation) {
             reject(new Error('Geolocation is not supported by your browser'));
         } else {
-            navigator.geolocation.getCurrentPosition(resolve, reject);
+            // Add timeout of 10 seconds
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            };
+            navigator.geolocation.getCurrentPosition(resolve, reject, options);
         }
     });
 }
