@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCheck - AI-Powered Symptom Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Modern Header with Glassmorphism -->
+        <header class="modern-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>HealthCheck<span class="beta-badge">AI</span></h1>
+                        <p class="subtitle">AI-Powered Symptom Checker</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-container">
+            <!-- Enhanced Disclaimer Card -->
+            <div class="disclaimer-card">
+                <div class="disclaimer-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="disclaimer-content">
+                    <h3>Medical Disclaimer</h3>
+                    <p>This tool provides preliminary information only. It is not a substitute for professional medical advice. Always consult a healthcare provider for diagnosis and treatment.</p>
+                </div>
+            </div>
+
+            <!-- Symptom Selection Card -->
+            <div class="card symptom-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-clipboard-list"></i> Select Your Symptoms</h2>
+                    <p class="card-description">Choose the symptoms you're experiencing for personalized health insights.</p>
+                </div>
+
+                <!-- Enhanced Search -->
+                <div class="search-container">
+                    <div class="search-box-modern">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="symptomSearch" placeholder="Search symptoms (e.g., headache, fever, cough)">
+                        <button class="clear-search" id="clearSearch" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modern Category Pills -->
+                <div class="category-container">
+                    <button class="category-pill active" data-category="all">
+                        <span>All Symptoms</span>
+                    </button>
+                    <button class="category-pill" data-category="general">
+                        <span>General</span>
+                    </button>
+                    <button class="category-pill" data-category="respiratory">
+                        <span>Respiratory</span>
+                    </button>
+                    <button class="category-pill" data-category="digestive">
+                        <span>Digestive</span>
+                    </button>
+                    <button class="category-pill" data-category="pain">
+                        <span>Pain</span>
+                    </button>
+                </div>
+
+                <!-- Symptom Grid -->
+                <div class="symptom-grid-modern" id="symptomGrid">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <!-- Selected Symptoms Panel -->
+                <div class="selected-panel" id="selectedSymptoms" style="display: none;">
+                    <div class="selected-header">
+                        <h3><i class="fas fa-check-circle"></i> Selected Symptoms (<span id="symptomCount">0</span>)</h3>
+                        <button class="clear-all-btn" id="clearAllBtn">
+                            <i class="fas fa-times"></i> Clear All
+                        </button>
+                    </div>
+                    <div class="selected-chips" id="selectedList"></div>
+                </div>
+
+                <!-- Analyze Button -->
+                <button class="analyze-btn-modern" id="analyzeBtn" disabled>
+                    <i class="fas fa-magic"></i>
+                    <span>Analyze Symptoms with AI</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-container" id="resultsSection" style="display: none;">
+                <!-- Progress Indicator -->
+                <div class="progress-steps">
+                    <div class="step completed">
+                        <div class="step-circle">1</div>
+                        <span>Symptoms Selected</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step active">
+                        <div class="step-circle">2</div>
+                        <span>Analysis Complete</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-circle">3</div>
+                        <span>Get Care</span>
+                    </div>
+                </div>
+
+                <!-- Diagnosis Results Card -->
+                <div class="card results-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-chart-line"></i> Diagnosis Analysis</h2>
+                        <p class="card-description">Based on your symptoms, here are the most likely conditions:</p>
+                    </div>
+                    <div class="conditions-grid" id="conditionsContainer"></div>
+                </div>
+
+                <!-- Detailed Treatment Card -->
+                <div class="card treatment-card" id="treatmentCard" style="display: none;">
+                    <div class="card-header">
+                        <h2><i class="fas fa-prescription-bottle-alt"></i> Detailed Recommendations</h2>
+                    </div>
+                    <div id="treatmentSection"></div>
+                </div>
+
+                <!-- Healthcare Providers Card -->
+                <div class="card providers-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-hospital"></i> Find Healthcare Providers</h2>
+                        <p class="card-description">Locate nearby doctors, hospitals, and clinics for professional care.</p>
+                    </div>
+                    <button class="location-btn-modern" id="findProvidersBtn">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Find Doctors & Hospitals Near Me</span>
+                    </button>
+                    <div class="providers-grid" id="providersList"></div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="reset-btn-modern" id="resetBtn">
+                        <i class="fas fa-redo"></i>
+                        <span>Start New Assessment</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modern Footer -->
+        <footer class="modern-footer">
+            <div class="footer-content">
+                <p><strong>For emergencies, call 911 immediately.</strong> This tool is for informational purposes only.</p>
+                <p class="copyright">&copy; 2024 HealthCheck AI. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

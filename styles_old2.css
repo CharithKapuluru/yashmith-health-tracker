@@ -1,0 +1,778 @@
+/* ====================================================
+   HEALTHCHECK AI - PROFESSIONAL MEDICAL UI 2024
+   Inspired by Healthily, WebMD, and modern healthcare apps
+   ==================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Calming Medical Color Palette */
+    --primary: #00B4A3;
+    --primary-dark: #009688;
+    --primary-light: #4DD0C1;
+    --accent: #FF6B6B;
+    --success: #4CAF50;
+    --warning: #FFC107;
+    --danger: #F44336;
+
+    /* Neutrals */
+    --white: #FFFFFF;
+    --gray-50: #FAFAFA;
+    --gray-100: #F5F5F5;
+    --gray-200: #EEEEEE;
+    --gray-300: #E0E0E0;
+    --gray-400: #BDBDBD;
+    --gray-500: #9E9E9E;
+    --gray-600: #757575;
+    --gray-700: #616161;
+    --gray-800: #424242;
+    --gray-900: #212121;
+
+    /* Background */
+    --bg-main: #F8FAFB;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-main);
+    color: var(--gray-900);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    min-height: 100vh;
+}
+
+/* ====================================================
+   HEADER - Clean & Minimal
+   ==================================================== */
+
+.modern-header {
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.beta-badge {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-top: 2px;
+}
+
+/* ====================================================
+   MAIN CONTENT - Single Column Layout
+   ==================================================== */
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* ====================================================
+   DISCLAIMER - Subtle & Informative
+   ==================================================== */
+
+.disclaimer-card {
+    background: #FFF9E6;
+    border-left: 4px solid var(--warning);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: start;
+}
+
+.disclaimer-icon {
+    color: var(--warning);
+    flex-shrink: 0;
+}
+
+.disclaimer-icon i {
+    font-size: 20px;
+}
+
+.disclaimer-content h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.disclaimer-content p {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+/* ====================================================
+   CARD - Clean White Cards
+   ==================================================== */
+
+.card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.card-header {
+    margin-bottom: 28px;
+}
+
+.card-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-header h2 i {
+    color: var(--primary);
+}
+
+.card-description {
+    font-size: 15px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* ====================================================
+   SEARCH - Modern Search Box
+   ==================================================== */
+
+.search-container {
+    margin-bottom: 24px;
+}
+
+.search-box-modern {
+    background: var(--gray-50);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.search-box-modern:focus-within {
+    background: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 180, 163, 0.1);
+}
+
+.search-box-modern i.fa-search {
+    color: var(--gray-400);
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.search-box-modern input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 14px 0;
+    font-size: 15px;
+    color: var(--gray-900);
+    outline: none;
+}
+
+.search-box-modern input::placeholder {
+    color: var(--gray-400);
+}
+
+.clear-search {
+    background: transparent;
+    border: none;
+    color: var(--gray-400);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.clear-search:hover {
+    color: var(--gray-600);
+}
+
+/* ====================================================
+   CATEGORIES - Minimal Pills
+   ==================================================== */
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.category-pill {
+    padding: 10px 20px;
+    background: var(--gray-100);
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.category-pill:hover {
+    background: var(--gray-200);
+}
+
+.category-pill.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ====================================================
+   SYMPTOM GRID - Clean Card Grid
+   ==================================================== */
+
+.symptom-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.symptom-grid-modern::-webkit-scrollbar {
+    width: 8px;
+}
+
+.symptom-grid-modern::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: 10px;
+}
+
+.symptom-grid-modern::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 10px;
+}
+
+.symptom-grid-modern::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+.symptom-card {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.symptom-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 180, 163, 0.15);
+    transform: translateY(-1px);
+}
+
+.symptom-card.selected {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 180, 163, 0.25);
+}
+
+.symptom-card .icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.symptom-card .name {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ====================================================
+   SELECTED SYMPTOMS - Badge Style
+   ==================================================== */
+
+.selected-panel {
+    background: #E8F5F4;
+    border: 2px solid var(--primary-light);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.selected-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.selected-header h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray-900);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selected-header h3 i {
+    color: var(--primary);
+}
+
+.clear-all-btn {
+    background: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-all-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.selected-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.symptom-chip {
+    background: var(--white);
+    border: 1.5px solid var(--primary);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.symptom-chip button {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.symptom-chip button:hover {
+    transform: scale(1.2);
+}
+
+/* ====================================================
+   ANALYZE BUTTON - Prominent CTA
+   ==================================================== */
+
+.analyze-btn-modern {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border: none;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 4px 16px rgba(0, 180, 163, 0.3);
+    transition: all 0.3s;
+}
+
+.analyze-btn-modern:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 180, 163, 0.4);
+}
+
+.analyze-btn-modern:disabled {
+    background: var(--gray-300);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ====================================================
+   RESULTS - Clean Results Layout
+   ==================================================== */
+
+.progress-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gray-200);
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.step.completed .step-circle {
+    background: var(--success);
+    color: var(--white);
+}
+
+.step.active .step-circle {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 0 4px rgba(0, 180, 163, 0.2);
+}
+
+.step span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.step.completed span,
+.step.active span {
+    color: var(--gray-900);
+}
+
+.step-line {
+    width: 80px;
+    height: 2px;
+    background: var(--gray-200);
+    margin: 0 12px;
+}
+
+.step.completed + .step-line {
+    background: var(--success);
+}
+
+.results-container {
+    margin-top: 40px;
+}
+
+.conditions-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.condition-card-modern {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.condition-card-modern::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 12px 0 0 12px;
+}
+
+.condition-card-modern.top-match::before {
+    background: var(--success);
+}
+
+.condition-card-modern:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.condition-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.condition-name-large {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.confidence-badge {
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.confidence-high {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.confidence-medium {
+    background: #FFF9E6;
+    color: #F57C00;
+}
+
+.confidence-low {
+    background: #FFEBEE;
+    color: #C62828;
+}
+
+.severity-badge {
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.severity-low {
+    background: var(--success);
+    color: var(--white);
+}
+
+.severity-medium {
+    background: var(--warning);
+    color: var(--white);
+}
+
+.severity-high {
+    background: var(--danger);
+    color: var(--white);
+}
+
+.condition-description {
+    font-size: 15px;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.matched-symptoms-modern {
+    padding-top: 16px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.matched-symptoms-modern h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+}
+
+.matched-symptoms-modern ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.matched-symptoms-modern li {
+    padding: 6px 12px;
+    background: var(--gray-100);
+    border-radius: 16px;
+    font-size: 13px;
+    color: var(--gray-700);
+    font-weight: 600;
+}
+
+/* ====================================================
+   FOOTER
+   ==================================================== */
+
+.modern-footer {
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    padding: 32px 24px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--gray-600);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.copyright {
+    color: var(--gray-500);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* ====================================================
+   ADDITIONAL ELEMENTS
+   ==================================================== */
+
+.location-btn-modern,
+.reset-btn-modern {
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s;
+}
+
+.location-btn-modern {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 180, 163, 0.25);
+    margin-bottom: 20px;
+}
+
+.location-btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 180, 163, 0.35);
+}
+
+.reset-btn-modern {
+    background: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.reset-btn-modern:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.providers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 24px 16px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .card-header h2 {
+        font-size: 22px;
+    }
+
+    .symptom-grid-modern {
+        grid-template-columns: 1fr;
+    }
+
+    .progress-steps {
+        padding: 16px;
+    }
+
+    .step-line {
+        width: 40px;
+    }
+}

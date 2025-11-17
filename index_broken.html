@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCheck AI - Smart Symptom Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>HealthCheck <span>AI</span></h1>
+                    <p>AI-Powered Symptom Analysis</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Check Your Symptoms with AI</h1>
+                <p class="hero-subtitle">Get instant health insights powered by artificial intelligence. Our advanced symptom checker analyzes your symptoms and provides personalized health recommendations.</p>
+                <div class="hero-features">
+                    <div class="feature-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Medical-Grade Data</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-Powered Analysis</span>
+                    </div>
+                    <div class="feature-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>100% Private</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer-section">
+        <div class="container-small">
+            <div class="disclaimer-box">
+                <div class="disclaimer-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="disclaimer-text">
+                    <strong>Important:</strong> This tool provides preliminary health information only. It is not a substitute for professional medical advice. For emergencies, call 911 immediately. Always consult with a qualified healthcare provider for accurate diagnosis and treatment.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Symptom Checker -->
+    <section class="symptom-checker">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tell Us Your Symptoms</h2>
+                <p class="section-description">Select all the symptoms you're currently experiencing</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="symptomSearch" class="search-input" placeholder="Search symptoms (e.g., headache, fever, nausea)">
+                    <button class="search-clear" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i>
+                    <span>All Symptoms</span>
+                </button>
+                <button class="category-btn" data-category="general">
+                    <i class="fas fa-user"></i>
+                    <span>General</span>
+                </button>
+                <button class="category-btn" data-category="respiratory">
+                    <i class="fas fa-lungs"></i>
+                    <span>Respiratory</span>
+                </button>
+                <button class="category-btn" data-category="digestive">
+                    <i class="fas fa-utensils"></i>
+                    <span>Digestive</span>
+                </button>
+                <button class="category-btn" data-category="pain">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Pain</span>
+                </button>
+            </div>
+
+            <!-- Selected Symptoms Counter -->
+            <div class="selection-info" id="selectedSymptoms" style="display: none;">
+                <div class="selection-header">
+                    <div class="selection-count">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong id="symptomCount">0</strong> symptoms selected</span>
+                    </div>
+                    <button class="btn-clear-all" id="clearAllBtn">
+                        <i class="fas fa-times"></i>
+                        Clear All
+                    </button>
+                </div>
+                <div class="selected-list" id="selectedList"></div>
+            </div>
+
+            <!-- Symptoms Grid -->
+            <div class="symptoms-grid" id="symptomGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Analyze Button -->
+            <div class="analyze-section">
+                <button class="btn-analyze" id="analyzeBtn" disabled>
+                    <i class="fas fa-magic"></i>
+                    <span>Analyze My Symptoms</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection" style="display: none;">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Symptoms</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step active">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Analysis</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Results</div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="section-header">
+                <h2 class="section-title">Your Health Analysis</h2>
+                <p class="section-description">Based on your symptoms, here are the possible conditions</p>
+            </div>
+
+            <div class="results-grid" id="conditionsContainer">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Treatment Info -->
+            <div id="treatmentCard" style="display: none;">
+                <div id="treatmentSection"></div>
+            </div>
+
+            <!-- Find Providers -->
+            <div class="find-providers">
+                <div class="providers-header">
+                    <h3>Find Healthcare Providers Near You</h3>
+                    <p>Locate doctors, clinics, and hospitals in your area</p>
+                </div>
+                <button class="btn-find-providers" id="findProvidersBtn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Find Nearby Providers</span>
+                </button>
+                <div id="providersList"></div>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="reset-section">
+                <button class="btn-reset" id="resetBtn">
+                    <i class="fas fa-redo"></i>
+                    <span>Start New Assessment</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Emergency?</strong> Call 911 immediately. This tool is for informational purposes only.</p>
+                <p class="footer-copyright">&copy; 2024 HealthCheck AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

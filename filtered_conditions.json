@@ -1,0 +1,1208 @@
+[
+  {
+    "id": 12,
+    "name": "Headache after lumbar puncture",
+    "symptoms": [
+      926
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by throbbing headache.",
+    "treatments": [
+      "Epidural blood patch",
+      "Conservative measures"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 38,
+    "name": "Ocular Hypertension",
+    "symptoms": [
+      62
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by elevated intraocular pressure without optic nerve damage.",
+    "treatments": [
+      "Observation with regular eye exams",
+      "use of eye drops to lower intraocular pressure (if necessary)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 57,
+    "name": "Gestational Diabetes",
+    "symptoms": [
+      121
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by high blood sugar levels during pregnancy.",
+    "treatments": [
+      "Blood sugar monitoring",
+      "healthy diet modifications",
+      "regular exercise",
+      "insulin injections (if needed)",
+      "close monitoring by healthcare provider"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 58,
+    "name": "Pregnancy-Induced Hypertension",
+    "symptoms": [
+      119
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by high blood pressure during pregnancy.",
+    "treatments": [
+      "Monitoring blood pressure",
+      "lifestyle modifications (such as salt restriction",
+      "regular exercise)",
+      "medication (such as antihypertensive drugs) if necessary",
+      "close monitoring by healthcare provider"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 59,
+    "name": "Gestational Hypertension",
+    "symptoms": [
+      120
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by high blood pressure without proteinuria (preeclampsia).",
+    "treatments": [
+      "Monitoring blood pressure",
+      "lifestyle modifications (such as salt restriction",
+      "regular exercise)",
+      "medication (such as antihypertensive drugs) if necessary",
+      "close monitoring by healthcare provider"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 88,
+    "name": "Asthma",
+    "symptoms": [
+      221,
+      856,
+      396,
+      421,
+      519
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by recurrent episodes of wheezing, shortness of breath, chest tightness.",
+    "treatments": [
+      "Long-term control medications (such as inhaled corticosteroids",
+      "long-acting beta-agonists)",
+      "quick-relief medications (such as short-acting beta-agonists)",
+      "avoidance of triggers (such as allergens",
+      "smoke)",
+      "regular monitoring of symptoms and lung function",
+      "development of an asthma action plan",
+      "proper inhaler technique",
+      "regular follow-up with a healthcare provider",
+      "emergency medications (such as oral corticosteroids) as needed"
+    ],
+    "specialty": "Pulmonologist"
+  },
+  {
+    "id": 101,
+    "name": "Postpartum Depression",
+    "symptoms": [
+      206,
+      509,
+      736,
+      568,
+      647,
+      679,
+      443,
+      378,
+      748,
+      550,
+      943,
+      925
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by persistent feelings of sadness, emptiness, or hopelessness.",
+    "treatments": [
+      "Psychotherapy (such as cognitive-behavioral therapy or interpersonal therapy)",
+      "support groups or peer counseling",
+      "antidepressant medication (if recommended by a healthcare professional)",
+      "hormone therapy (in some cases)",
+      "lifestyle changes (such as exercise",
+      "healthy diet",
+      "sleep hygiene)",
+      "involving a partner or family in the care of the baby",
+      "social support and understanding from family and friends",
+      "regular follow-up and monitoring by healthcare professionals"
+    ],
+    "specialty": "Psychiatrist / Psychologist"
+  },
+  {
+    "id": 178,
+    "name": "Gastroesophageal Reflux Disease (GERD)",
+    "symptoms": [
+      114,
+      318,
+      392
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by heartburn, acid reflux, chest pain.",
+    "treatments": [
+      "Lifestyle changes",
+      "medications (antacids",
+      "proton pump inhibitors)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 250,
+    "name": "Tension Headache",
+    "symptoms": [
+      163,
+      927
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by mild to moderate head pain, tightness or pressure sensation on both sides of head.",
+    "treatments": [
+      "Over-the-counter pain relievers",
+      "relaxation techniques",
+      "stress management"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 256,
+    "name": "Anxiety",
+    "symptoms": [
+      73,
+      831,
+      619,
+      767
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by excessive worrying, restlessness, increased heart rate.",
+    "treatments": [
+      "Therapy (cognitive-behavioral therapy",
+      "psychotherapy)",
+      "medications (antidepressants",
+      "anti-anxiety drugs)"
+    ],
+    "specialty": "Psychiatrist / Psychologist"
+  },
+  {
+    "id": 289,
+    "name": "Vesicoureteral Reflux",
+    "symptoms": [
+      97,
+      960,
+      344,
+      600
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by frequent urinary tract infections, urinary urgency or frequency, bedwetting (in children).",
+    "treatments": [
+      "Antibiotics",
+      "bladder training exercises",
+      "surgical correction (in some cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 382,
+    "name": "Chronic Headache",
+    "symptoms": [
+      207,
+      919
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by persistent head pain, tension in neck and shoulders.",
+    "treatments": [
+      "Pain-relieving medications",
+      "relaxation techniques",
+      "stress management"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 392,
+    "name": "Influenza (Flu)",
+    "symptoms": [
+      122,
+      367,
+      544,
+      420,
+      873,
+      415
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by high fever, body aches, fatigue.",
+    "treatments": [
+      "Rest",
+      "fluids",
+      "over-the-counter medications for symptom relief",
+      "antiviral medications (in some cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 395,
+    "name": "Gastroenteritis (Stomach Flu)",
+    "symptoms": [
+      174,
+      979,
+      442,
+      307,
+      552
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by nausea, vomiting, diarrhea.",
+    "treatments": [
+      "Rest",
+      "fluids (electrolyte solutions)",
+      "bland diet",
+      "avoiding irritating foods",
+      "over-the-counter medications for symptom relief"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 399,
+    "name": "Type 1 Diabetes",
+    "symptoms": [
+      98,
+      135,
+      296
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by frequent urination, increased thirst, weight loss.",
+    "treatments": [
+      "Insulin therapy",
+      "Blood sugar monitoring",
+      "Healthy eating",
+      "Regular exercise"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 400,
+    "name": "Type 2 Diabetes",
+    "symptoms": [
+      86,
+      133,
+      256
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, increased hunger, slow healing of wounds.",
+    "treatments": [
+      "Oral medications",
+      "Insulin therapy (in some cases)",
+      "Blood sugar monitoring",
+      "Exercise"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 1,
+    "name": "Panic disorder",
+    "symptoms": [
+      197,
+      267,
+      279,
+      251,
+      87,
+      52
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by palpitations, sweating, trembling.",
+    "treatments": [
+      "Antidepressant medications",
+      "Cognitive Behavioral Therapy",
+      "Relaxation Techniques"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 10,
+    "name": "Cellulitis",
+    "symptoms": [
+      223,
+      182,
+      915,
+      268,
+      253,
+      160
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by redness, pain, tenderness.",
+    "treatments": [
+      "Antibiotics",
+      "Warm compresses",
+      "immobilization",
+      "rest",
+      "Pain management"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 33,
+    "name": "Normal-Tension Glaucoma",
+    "symptoms": [
+      105,
+      975
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by gradual loss of vision, visual field defects.",
+    "treatments": [
+      "Eye drops to lower intraocular pressure (e.g.",
+      "prostaglandin analogs",
+      "beta blockers",
+      "alpha agonists",
+      "carbonic anhydrase inhibitors)",
+      "oral medications (e.g.",
+      "carbonic anhydrase inhibitors)",
+      "laser trabeculoplasty",
+      "surgical procedures (e.g.",
+      "trabeculectomy",
+      "glaucoma drainage implants)"
+    ],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 39,
+    "name": "Low-Tension Glaucoma",
+    "symptoms": [
+      105,
+      975
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by gradual loss of vision, visual field defects.",
+    "treatments": [
+      "Eye drops to lower intraocular pressure (e.g.",
+      "prostaglandin analogs",
+      "beta blockers",
+      "alpha agonists",
+      "carbonic anhydrase inhibitors)",
+      "oral medications (e.g.",
+      "carbonic anhydrase inhibitors)",
+      "laser trabeculoplasty",
+      "surgical procedures (e.g.",
+      "trabeculectomy",
+      "glaucoma drainage implants)"
+    ],
+    "specialty": "Ophthalmologist"
+  },
+  {
+    "id": 55,
+    "name": "Chronic Migraine",
+    "symptoms": [
+      218,
+      468
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by recurrent, disabling migraines.",
+    "treatments": [
+      "Medications (such as preventive medications",
+      "pain relievers",
+      "triptans)",
+      "lifestyle modifications (such as identifying triggers",
+      "stress management",
+      "regular sleep patterns)",
+      "relaxation techniques",
+      "biofeedback",
+      "cognitive-behavioral therapy",
+      "nerve blocks",
+      "Botox injections",
+      "neuromodulation devices",
+      "acupuncture"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 62,
+    "name": "Urinary Tract Infection (UTI)",
+    "symptoms": [
+      192,
+      571,
+      772,
+      404
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by painful urination, frequent urination, pelvic pain.",
+    "treatments": [
+      "Antibiotics safe for pregnancy",
+      "increased fluid intake",
+      "maintaining good hygiene",
+      "urine culture and sensitivity testing to guide antibiotic selection"
+    ],
+    "specialty": "Nephrologist / Urologist"
+  },
+  {
+    "id": 63,
+    "name": "Anemia",
+    "symptoms": [
+      86,
+      986,
+      763,
+      856
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, pale skin.",
+    "treatments": [
+      "Iron supplementation",
+      "dietary changes (iron-rich foods)",
+      "managing underlying causes (such as treating iron deficiency or vitamin B12 deficiency)",
+      "prenatal vitamins"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 67,
+    "name": "Carpal Tunnel Syndrome",
+    "symptoms": [
+      277,
+      723,
+      328
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by tingling, numbness, and pain in the hand and fingers.",
+    "treatments": [
+      "Wrist splints",
+      "avoiding repetitive hand movements",
+      "applying cold or hot compresses",
+      "gentle exercises",
+      "ergonomic adjustments"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 68,
+    "name": "Sciatica",
+    "symptoms": [
+      248,
+      928,
+      740
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by sharp pain, tingling, or numbness that radiates from the lower back through the hips and down the leg.",
+    "treatments": [
+      "Rest",
+      "gentle stretching exercises",
+      "warm or cold compresses",
+      "prenatal massages",
+      "maintaining good posture",
+      "avoiding activities that worsen the pain"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 70,
+    "name": "Hemorrhoids",
+    "symptoms": [
+      271,
+      651,
+      742
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by swollen, itchy, or painful veins in the rectal area.",
+    "treatments": [
+      "Increasing fiber intake",
+      "staying hydrated",
+      "avoiding straining during bowel movements",
+      "warm sitz baths",
+      "topical creams or ointments",
+      "over-the-counter pain relievers (after consulting with a healthcare provider)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 92,
+    "name": "Acute Sinusitis",
+    "symptoms": [
+      82,
+      710,
+      924,
+      788,
+      420,
+      580,
+      544,
+      553
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by facial pain or pressure, nasal congestion, thick nasal discharge.",
+    "treatments": [
+      "Home remedies (such as nasal saline irrigation",
+      "steam inhalation)",
+      "over-the-counter pain relievers (such as acetaminophen or ibuprofen)",
+      "nasal decongestants (for short-term use)",
+      "nasal corticosteroids (to reduce inflammation)",
+      "plenty of fluids and rest",
+      "warm compresses",
+      "avoidance of irritants (such as smoke or allergens)",
+      "prescription antibiotics (if bacterial infection is suspected or confirmed)",
+      "management of underlying causes (such as allergies or nasal polyps)",
+      "symptom relief medications (such as cough suppressants or antihistamines)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 102,
+    "name": "Coronary Atherosclerosis",
+    "symptoms": [
+      28,
+      856,
+      544,
+      644,
+      481,
+      711,
+      891,
+      656,
+      590
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by chest pain or discomfort (angina), shortness of breath, fatigue.",
+    "treatments": [
+      "Lifestyle changes (such as a heart-healthy diet",
+      "regular exercise",
+      "weight management",
+      "smoking cessation)",
+      "medication (such as aspirin",
+      "cholesterol-lowering medications",
+      "beta-blockers",
+      "calcium channel blockers",
+      "nitroglycerin)",
+      "procedures (such as angioplasty and stenting",
+      "coronary artery bypass grafting)",
+      "cardiac rehabilitation",
+      "management of other risk factors (such as high blood pressure",
+      "diabetes)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 127,
+    "name": "Juvenile Rheumatoid Arthritis",
+    "symptoms": [
+      149,
+      894,
+      883,
+      670,
+      552,
+      807
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by joint pain, swelling, stiffness.",
+    "treatments": [
+      "Medications (NSAIDs",
+      "DMARDs)",
+      "physical therapy",
+      "occupational therapy",
+      "exercise",
+      "assistive devices"
+    ],
+    "specialty": "Orthopedist / Rheumatologist"
+  },
+  {
+    "id": 158,
+    "name": "Hypothyroidism",
+    "symptoms": [
+      86,
+      990,
+      845,
+      495,
+      416,
+      438,
+      709,
+      505
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weight gain, sensitivity to cold.",
+    "treatments": [
+      "Hormone replacement therapy with synthetic thyroid hormone (levothyroxine)",
+      "regular monitoring of thyroid hormone levels and adjustment of medication dosage",
+      "lifestyle modifications (such as healthy diet and regular exercise)",
+      "management of associated symptoms (such as cholesterol-lowering medications or antidepressants)",
+      "education and support for long-term management"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 159,
+    "name": "Primary Insomnia",
+    "symptoms": [
+      47,
+      431,
+      647,
+      447
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by difficulty falling asleep or staying asleep, daytime sleepiness, irritability.",
+    "treatments": [
+      "Cognitive-behavioral therapy for insomnia (CBT-I)",
+      "sleep hygiene practices (such as maintaining a regular sleep schedule",
+      "creating a comfortable sleep environment)",
+      "relaxation techniques",
+      "stimulus control techniques (such as limiting bed activities to sleep only)",
+      "sleep restriction therapy",
+      "medications for insomnia (such as sedative-hypnotics",
+      "melatonin agonists)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 165,
+    "name": "Concussion",
+    "symptoms": [
+      111,
+      481,
+      713,
+      414,
+      694,
+      849,
+      700
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by headache, dizziness, nausea or vomiting.",
+    "treatments": [
+      "Physical and cognitive rest",
+      "gradual return to normal activities",
+      "symptom management (such as pain relievers or anti-nausea medication)",
+      "monitoring for complications (such as changes in neurological function)",
+      "cognitive rehabilitation (if persistent cognitive problems)",
+      "management of associated symptoms (such as sleep disturbances or mood changes)",
+      "education and support for recovery",
+      "avoiding further head injuries"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 172,
+    "name": "Mononucleosis",
+    "symptoms": [
+      86,
+      873,
+      909
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, sore throat, swollen lymph nodes.",
+    "treatments": [
+      "Rest",
+      "pain relievers",
+      "fluids",
+      "symptom management"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 187,
+    "name": "Panic Attack",
+    "symptoms": [
+      25,
+      856,
+      765
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by chest pain, shortness of breath, palpitations.",
+    "treatments": [
+      "Breathing exercises",
+      "relaxation techniques",
+      "therapy"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 205,
+    "name": "Sciatica",
+    "symptoms": [
+      186
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by pain radiating from the lower back to the leg.",
+    "treatments": [
+      "Pain medications",
+      "physical therapy",
+      "stretching exercises"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 210,
+    "name": "Hirsutism",
+    "symptoms": [
+      70
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by excessive hair growth in women.",
+    "treatments": [
+      "Medications (anti-androgens",
+      "oral contraceptives)",
+      "hair removal methods",
+      "lifestyle changes"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 217,
+    "name": "Dermatitis due to Sun Exposure",
+    "symptoms": [
+      223,
+      649,
+      807,
+      353
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by redness, itching, rash.",
+    "treatments": [
+      "Topical corticosteroids",
+      "moisturizers",
+      "avoiding sun exposure"
+    ],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 218,
+    "name": "Anemia due to Chronic Kidney Disease",
+    "symptoms": [
+      86,
+      986,
+      763
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, pale skin.",
+    "treatments": [
+      "Erythropoiesis-stimulating agents (ESA)",
+      "iron supplementation",
+      "blood transfusions (in severe cases)"
+    ],
+    "specialty": "Nephrologist / Urologist"
+  },
+  {
+    "id": 225,
+    "name": "Premenstrual Tension Syndrome",
+    "symptoms": [
+      164,
+      354,
+      373,
+      647
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by mood swings, bloating, breast tenderness.",
+    "treatments": [
+      "Lifestyle changes",
+      "medications (pain relievers",
+      "hormonal contraceptives)",
+      "therapy"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 226,
+    "name": "Orbital Cellulitis",
+    "symptoms": [
+      78,
+      894,
+      820,
+      970
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by eye pain, swelling, redness.",
+    "treatments": [
+      "Antibiotics",
+      "hospitalization (in severe cases)",
+      "surgical drainage (in some cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 246,
+    "name": "Seborrheic Dermatitis",
+    "symptoms": [
+      222,
+      651,
+      326,
+      427,
+      554
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by red, itchy, and oily patches of skin.",
+    "treatments": [
+      "Topical antifungal creams or ointments",
+      "medicated shampoos",
+      "corticosteroid creams"
+    ],
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": 254,
+    "name": "Food Allergy",
+    "symptoms": [
+      216,
+      649,
+      894,
+      444,
+      575
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by rash, itching, swelling.",
+    "treatments": [
+      "Avoidance of allergenic food",
+      "antihistamines",
+      "epinephrine (in severe cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 263,
+    "name": "Conjunctivitis due to Allergy",
+    "symptoms": [
+      223,
+      649,
+      982,
+      906
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by redness, itching, watery discharge.",
+    "treatments": [
+      "Allergen avoidance",
+      "antihistamine eye drops",
+      "cold compresses",
+      "lubricating eye drops"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 267,
+    "name": "Osteoarthritis",
+    "symptoms": [
+      149,
+      883,
+      894
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by joint pain, stiffness, swelling.",
+    "treatments": [
+      "Pain relievers",
+      "physical therapy",
+      "weight management",
+      "assistive devices",
+      "surgery (in severe cases)"
+    ],
+    "specialty": "Orthopedist / Rheumatologist"
+  },
+  {
+    "id": 268,
+    "name": "Thyroid Disease",
+    "symptoms": [
+      86,
+      989,
+      701,
+      495
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weight changes, mood swings.",
+    "treatments": [
+      "Medications (thyroid hormone replacement",
+      "antithyroid drugs)",
+      "radioactive iodine therapy",
+      "surgery (in some cases)"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 273,
+    "name": "Pneumonia",
+    "symptoms": [
+      36,
+      552,
+      392,
+      444
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by cough, fever, chest pain.",
+    "treatments": [
+      "Antibiotics",
+      "antiviral medications (if applicable)",
+      "rest",
+      "fluids",
+      "symptomatic relief"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 280,
+    "name": "Anemia due to Malignancy",
+    "symptoms": [
+      86,
+      986,
+      856,
+      763
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, shortness of breath.",
+    "treatments": [
+      "Treating underlying malignancy",
+      "blood transfusions",
+      "medications (erythropoiesis-stimulating agents",
+      "iron supplements)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 285,
+    "name": "Parathyroid Adenoma",
+    "symptoms": [
+      86,
+      986,
+      368,
+      571,
+      661
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, bone pain.",
+    "treatments": [
+      "Surgical removal of the adenoma (parathyroidectomy)",
+      "medications to manage calcium levels"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 294,
+    "name": "Hepatitis due to a Toxin",
+    "symptoms": [
+      86,
+      654,
+      304,
+      711,
+      979
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, jaundice, abdominal pain.",
+    "treatments": [
+      "Supportive care",
+      "removal or avoidance of the toxic substance",
+      "management of symptoms"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 300,
+    "name": "Kidney Stone",
+    "symptoms": [
+      241,
+      355,
+      571
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by severe pain in the side or back, blood in the urine, frequent urination.",
+    "treatments": [
+      "Pain management",
+      "increased fluid intake",
+      "medication to facilitate stone passage",
+      "minimally invasive procedures or surgery"
+    ],
+    "specialty": "Nephrologist / Urologist"
+  },
+  {
+    "id": 301,
+    "name": "Autism",
+    "symptoms": [
+      23,
+      413,
+      832
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by challenges with social interaction, communication difficulties, restricted interests or repetitive behaviors.",
+    "treatments": [
+      "Behavioral therapy",
+      "educational interventions",
+      "speech and language therapy",
+      "medications for associated symptoms"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 305,
+    "name": "Aplastic Anemia",
+    "symptoms": [
+      86,
+      763,
+      569,
+      856,
+      804,
+      794
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, pale skin, frequent infections.",
+    "treatments": [
+      "Blood transfusions",
+      "bone marrow-stimulating medications",
+      "immunosuppressive therapy",
+      "stem cell transplant (in severe cases)",
+      "supportive care"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 308,
+    "name": "Hemolytic Anemia",
+    "symptoms": [
+      86,
+      986,
+      763,
+      856,
+      654
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, pale skin.",
+    "treatments": [
+      "Treatment of underlying cause",
+      "blood transfusions",
+      "medications (immunosuppressants",
+      "corticosteroids)",
+      "splenectomy (in some cases)",
+      "supportive care",
+      "folic acid or iron supplementation"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 328,
+    "name": "Pseudohypoparathyroidism",
+    "symptoms": [
+      125,
+      921,
+      855,
+      838
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by hypocalcemia (low calcium levels), tetany (muscle spasms), short stature.",
+    "treatments": [
+      "Calcium and vitamin D supplementation",
+      "management of complications",
+      "hormone replacement therapy (if necessary)"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 335,
+    "name": "Anemia of Chronic Disease",
+    "symptoms": [
+      86,
+      986,
+      763,
+      856,
+      433
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weakness, pale skin.",
+    "treatments": [
+      "Treating the underlying chronic disease",
+      "addressing nutritional deficiencies",
+      "blood transfusions (in severe cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 351,
+    "name": "Stroke",
+    "symptoms": [
+      263,
+      337,
+      738,
+      414,
+      944,
+      851
+    ],
+    "severity": "high",
+    "description": "A medical condition characterized by sudden numbness or weakness of the face, arm, or leg (typically on one side of the body).",
+    "treatments": [
+      "Emergency medical attention",
+      "medication (clot-busting drugs",
+      "anticoagulants)",
+      "supportive care",
+      "rehabilitation (physical therapy",
+      "speech therapy)",
+      "lifestyle modifications (diet",
+      "exercise",
+      "smoking cessation)",
+      "addressing underlying risk factors"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 356,
+    "name": "Hashimoto Thyroiditis",
+    "symptoms": [
+      86,
+      990,
+      416,
+      495,
+      438,
+      704,
+      845
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by fatigue, weight gain, constipation.",
+    "treatments": [
+      "Thyroid hormone replacement (levothyroxine)",
+      "monitoring and management of symptoms"
+    ],
+    "specialty": "Endocrinologist"
+  },
+  {
+    "id": 368,
+    "name": "Chronic Sinusitis",
+    "symptoms": [
+      82,
+      710,
+      924,
+      789,
+      420,
+      544
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by facial pain or pressure, nasal congestion, thick nasal discharge.",
+    "treatments": [
+      "Saline nasal irrigation",
+      "nasal corticosteroids",
+      "antibiotics (in bacterial cases)",
+      "decongestants",
+      "pain relievers",
+      "surgery (in severe or chronic cases)"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 376,
+    "name": "Migraine",
+    "symptoms": [
+      236,
+      711,
+      848
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by severe headaches, nausea, sensitivity to light and sound.",
+    "treatments": [
+      "Pain-relieving medications",
+      "lifestyle changes",
+      "preventive medications"
+    ],
+    "specialty": "General Practitioner"
+  },
+  {
+    "id": 377,
+    "name": "Arthritis",
+    "symptoms": [
+      149,
+      883,
+      894
+    ],
+    "severity": "medium",
+    "description": "A medical condition characterized by joint pain, stiffness, swelling.",
+    "treatments": [
+      "Medications",
+      "physical therapy",
+      "surgery (in severe cases)"
+    ],
+    "specialty": "Orthopedist / Rheumatologist"
+  }
+]
