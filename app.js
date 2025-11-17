@@ -15468,20 +15468,17 @@ async function findNearbyProviders() {
 // Search for places using backend API
 async function searchPlaces(type, location) {
     try {
-        const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-            ? 'http://localhost:3000'
-            : window.location.origin;
+        // Call Google Maps Places API directly from the browser
+        const GOOGLE_API_KEY = 'AIzaSyD5HcagHEzKBpgXtKMKXZDWAkZdPdaX8Vs';
+        const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location.lat},${location.lng}&radius=5000&type=${type}&key=${GOOGLE_API_KEY}`;
 
-        const response = await fetch(
-            `${API_URL}/api/places/nearby?lat=${location.lat}&lng=${location.lng}&type=${type}&radius=5000`
-        );
-
+        const response = await fetch(url);
         const data = await response.json();
 
         // Check for API errors
-        if (data.error) {
+        if (data.error_message) {
             console.error(`API Error for ${type}:`, data);
-            throw new Error(data.message || data.error || 'API request failed - Places API may not be enabled');
+            throw new Error(data.error_message || 'API request failed - Places API may not be enabled');
         }
 
         if (!response.ok) {
